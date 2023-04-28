@@ -9,4 +9,7 @@ pub struct AccountRegisteredSbModel {
 pub struct RegisteredSbModel {
     #[prost(string, tag = "1")]
     pub trader_id: String,
+
+    #[prost(string, tag = "2")]
+    pub brand_id: String,
 }
