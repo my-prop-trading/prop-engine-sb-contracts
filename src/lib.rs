@@ -16,3 +16,15 @@ mod trader_account_creation;
 
 #[cfg(feature = "trader-account-creation")]
 pub use trader_account_creation::*;
+
+#[cfg(feature = "trader-account-status-update")]
+mod trader_account_status_update;
+
+#[cfg(feature = "trader-account-status-update")]
+pub use trader_account_status_update::*;
+
+#[cfg(feature = "account-balance-update")]
+mod account_balance_update;
+
+#[cfg(feature = "account-balance-update")]
+pub use account_balance_update::*;
