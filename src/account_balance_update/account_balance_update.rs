@@ -13,14 +13,14 @@ pub struct TAccountBalanceUpdateBodySbModel {
     pub updated_at: i64,
     #[prost(int64, tag = "3")]
     pub leverage: i64,
-    #[prost(int64, tag = "4")]
+    #[prost(double, tag = "4")]
     pub balance: f64,
-    #[prost(int64, tag = "5")]
+    #[prost(double, tag = "5")]
     pub equity: f64,
-    #[prost(int64, tag = "6")]
+    #[prost(double, tag = "6")]
     pub margin: f64,
-    #[prost(int64, tag = "7")]
+    #[prost(double, tag = "7")]
     pub margin_free: f64,
-    #[prost(int64, tag = "8")]
+    #[prost(double, tag = "8")]
     pub margin_level: f64,
 }
