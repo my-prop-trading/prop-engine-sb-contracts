@@ -28,3 +28,9 @@ mod account_balance_update;
 
 #[cfg(feature = "account-balance-update")]
 pub use account_balance_update::*;
+
+#[cfg(feature = "trading-scenario-update")]
+mod trading_scenario_update;
+
+#[cfg(feature = "trading-scenario-update")]
+pub use trading_scenario_update::*;
