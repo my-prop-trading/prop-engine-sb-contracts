@@ -10,17 +10,20 @@ pub struct TraderAccountOpenPositionBodySbModel {
     #[prost(string, tag = "1")]
     pub trader_account_id: String,
 
-    #[prost(int, tag = "2")]
-    pub metatrader_login: String,
+    #[prost(int64, tag = "2")]
+    pub metatrader_login: int64,
 
-    #[prost(string, tag = "3")]
-    pub position_id: String,
+    #[prost(int64, tag = "3")]
+    pub position_id: int64,
 
     #[prost(enumeration = "TradingPlatformDto", tag = "4")]
     pub r#type: i32,
 
     #[prost(enumeration = "BrokerDto", tag = "5")]
     pub r#type: i32,
+
+    #[prost(int64, tag = "6")]
+    pub open_time: i64,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
