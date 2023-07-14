@@ -11,16 +11,16 @@ pub struct TraderAccountOpenPositionBodySbModel {
     pub trader_account_id: String,
 
     #[prost(int64, tag = "2")]
-    pub metatrader_login: int64,
+    pub metatrader_login: i64,
 
     #[prost(int64, tag = "3")]
-    pub position_id: int64,
+    pub position_id: i64,
 
-    #[prost(enumeration = "TradingPlatformDto", tag = "4")]
-    pub r#type: i32,
+    #[prost(enumeration="TradingPlatformDto", tag = "4")]
+    pub trading_platform_type: i32,
 
-    #[prost(enumeration = "BrokerDto", tag = "5")]
-    pub r#type: i32,
+    #[prost(enumeration="BrokerDto", tag = "5")]
+    pub broker_type: i32,
 
     #[prost(int64, tag = "6")]
     pub open_time: i64,

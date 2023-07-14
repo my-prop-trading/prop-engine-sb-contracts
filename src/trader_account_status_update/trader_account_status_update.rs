@@ -11,10 +11,10 @@ pub struct TraderAccountStatusUpdateBodySbModel {
     pub trader_account_id: String,
 
     #[prost(enumeration="TradingPlatformDto", tag = "2")]
-    pub r#type: i32,
+    pub trading_platform_type: i32,
 
     #[prost(enumeration="BrokerDto", tag = "3")]
-    pub r#type: i32,
+    pub broker_type: i32,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
