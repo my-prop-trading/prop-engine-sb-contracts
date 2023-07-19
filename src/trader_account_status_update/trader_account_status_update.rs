@@ -17,7 +17,13 @@ pub struct TraderAccountStatusUpdateBodySbModel {
     pub broker_type: i32,
 
     #[prost(enumeration="TraderAccountStatus", tag = "4")]
-    pub status: i32 
+    pub status: i32 ,
+
+    #[prost(string, tag = "5")]
+    pub brand: String,
+
+    #[prost(string, tag = "6")]
+    pub client_id: String,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
