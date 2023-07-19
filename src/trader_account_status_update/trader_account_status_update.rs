@@ -24,6 +24,9 @@ pub struct TraderAccountStatusUpdateBodySbModel {
 
     #[prost(string, tag = "6")]
     pub client_id: String,
+
+    #[prost(int32, tag = "7")]
+    pub phase: i32,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
