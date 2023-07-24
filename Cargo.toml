@@ -12,6 +12,7 @@ account-balance-update = []
 trading-scenario-update = []
 metatrader-scenario-update = []
 trader-account-open-position = []
+account-kyc-update = []
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
