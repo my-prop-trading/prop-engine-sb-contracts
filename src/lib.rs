@@ -52,8 +52,8 @@ mod metatrader_account_open_position;
 #[cfg(feature = "metatrader-account-open-position")]
 pub use metatrader_account_open_position::*;
 
-#[cfg(feature = "metatrader-account-deleted")]
-mod metatrader_account_deleted;
+#[cfg(feature = "metatrader-account-delete")]
+mod metatrader_account_delete;
 
-#[cfg(feature = "metatrader-account-deleted")]
-pub use metatrader_account_deleted::*;
+#[cfg(feature = "metatrader-account-delete")]
+pub use metatrader_account_delete::*;

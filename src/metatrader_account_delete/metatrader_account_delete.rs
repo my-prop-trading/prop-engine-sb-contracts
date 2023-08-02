@@ -1,5 +1,5 @@
 #[derive(Clone, PartialEq, ::prost::Message)]
-#[my_service_bus_macros::my_sb_entity_protobuf_model(topic_id = "metatrader-account-deleted")]
+#[my_service_bus_macros::my_sb_entity_protobuf_model(topic_id = "metatrader-account-delete")]
 pub struct MetatraderAccountDeletedSbModel {
     #[prost(message, tag = "1")]
     pub event: Option<MetatraderAccountDeletedBodySbModel>,
