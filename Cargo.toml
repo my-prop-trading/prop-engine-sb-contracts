@@ -13,7 +13,8 @@ trading-scenario-update = []
 metatrader-scenario-update = []
 trader-account-open-position = []
 account-kyc-update = []
-
+metatrader-account-open-position = []
+metatrader-account-deleted = []
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
