@@ -57,3 +57,9 @@ mod metatrader_account_delete;
 
 #[cfg(feature = "metatrader-account-delete")]
 pub use metatrader_account_delete::*;
+
+#[cfg(feature = "sumsub-status-update")]
+mod sumsub_status_update;
+
+#[cfg(feature = "sumsub-status-update")]
+pub use sumsub_status_update::*;
