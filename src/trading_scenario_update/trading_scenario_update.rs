@@ -12,6 +12,18 @@ pub struct  TradingScenarioBodySbModel {
 
     #[prost(enumeration="TradingScenarioResolution", tag = "2")]
     pub r#type: i32,
+
+    #[prost(double, tag = "3")]
+    pub current_equity: f64,
+
+    #[prost(double, tag = "4")]
+    pub current_balance: f64,
+
+    #[prost(double, tag = "5")]
+    pub current_profit: f64,
+
+    #[prost(int32, tag = "6")]
+    pub days_traded: i32,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
