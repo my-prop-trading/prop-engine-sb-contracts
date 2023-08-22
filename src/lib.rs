@@ -1,3 +1,6 @@
+mod common;
+pub use common::*;
+
 #[cfg(feature = "account-registration")]
 mod account_registration;
 
