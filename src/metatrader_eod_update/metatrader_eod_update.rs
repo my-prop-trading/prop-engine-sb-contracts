@@ -11,16 +11,19 @@ pub struct MetatraderEndOfDayUpdateSbModel {
 
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MetatraderEndOfDayUpdateBodySbModel {
-    #[prost(string, tag = "1")]
-    pub trader_account_id: String,
+    #[prost(int64, tag = "1")]
+    pub updated_at: i64,
 
-    #[prost(enumiration="EventType", tag = "2")]
+    #[prost(int64, tag = "2")]
+    pub metatrader_updated_at: i64,
+
+    #[prost(enumiration="EventType", tag = "3")]
     pub event_type: i32,
 
-    #[prost(enumeration = "TradingPlatform", tag = "3")]
+    #[prost(enumeration = "TradingPlatform", tag = "4")]
     pub trading_platform_type: i32,
 
-    #[prost(enumeration = "Broker", tag = "4")]
+    #[prost(enumeration = "Broker", tag = "5")]
     pub broker_type: i32,
 }
 
