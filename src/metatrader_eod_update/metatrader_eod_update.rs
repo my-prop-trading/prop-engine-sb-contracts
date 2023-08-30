@@ -17,7 +17,7 @@ pub struct MetatraderEndOfDayUpdateBodySbModel {
     #[prost(int64, tag = "2")]
     pub metatrader_updated_at: i64,
 
-    #[prost(enumiration="EventType", tag = "3")]
+    #[prost(enumeration="MetatraderEndOfDayEventType", tag = "3")]
     pub event_type: i32,
 
     #[prost(enumeration = "TradingPlatform", tag = "4")]
@@ -29,7 +29,7 @@ pub struct MetatraderEndOfDayUpdateBodySbModel {
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
-pub enum EventType {
+pub enum MetatraderEndOfDayEventType {
     Started = 0,
     TradeDisabled = 1,
     PositionsClosed = 2,
