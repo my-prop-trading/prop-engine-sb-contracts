@@ -66,3 +66,9 @@ mod sumsub_status_update;
 
 #[cfg(feature = "sumsub-status-update")]
 pub use sumsub_status_update::*;
+
+#[cfg(feature = "metatrader-eod-update")]
+mod metatrader_eod_update;
+
+#[cfg(feature = "metatrader-eod-update")]
+pub use metatrader_eod_update   ::*;
