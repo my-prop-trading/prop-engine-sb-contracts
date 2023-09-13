@@ -53,7 +53,7 @@ pub struct SumsubUpdateBodySbModel {
     pub applicant_id: String,
     #[prost(string, tag = "4")]
     pub created_at: i64,
-    #[prost(enumeration="ProofType", tag = "5")]
+    #[prost(enumeration="NotificationType", tag = "5")]
     pub notification_type: i32,
     #[prost(enumeration = "ProofType", tag = "6")]
     pub proof_type: i32,
