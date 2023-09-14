@@ -13,7 +13,7 @@ pub struct ClientLiveAccountContractUpdateBodySbModel{
     pub trader_account_aggregated_id: String,
     #[prost(string, tag = "3")]
     pub contract_id: String,
-    #[prost(enumeration="ContractStatus", tag = "4")]
+    #[prost(enumeration="ClientLiveAccountContractStatus", tag = "4")]
     pub status: i32,
     #[prost(string, optional, tag = "5")]
     pub description: Option<String>,
@@ -21,7 +21,7 @@ pub struct ClientLiveAccountContractUpdateBodySbModel{
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
-pub enum ContractStatus{
+pub enum ClientLiveAccountContractStatus{
     Created = 0,
     SentToClient = 1,
     SignedByClientAndReceived = 2,
