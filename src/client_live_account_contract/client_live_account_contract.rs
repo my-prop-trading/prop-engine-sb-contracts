@@ -8,14 +8,10 @@ pub struct ClientLiveAccountContractUpdateSbModel{
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ClientLiveAccountContractUpdateBodySbModel{
     #[prost(string, tag = "1")]
-    pub client_id: String,
-    #[prost(string, tag = "2")]
     pub trader_account_aggregated_id: String,
-    #[prost(string, tag = "3")]
-    pub contract_id: String,
-    #[prost(enumeration="ClientLiveAccountContractStatus", tag = "4")]
+    #[prost(enumeration="ClientLiveAccountContractStatus", tag = "2")]
     pub status: i32,
-    #[prost(string, optional, tag = "5")]
+    #[prost(string, optional, tag = "3")]
     pub description: Option<String>,
 }
 
