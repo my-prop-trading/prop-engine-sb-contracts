@@ -32,7 +32,7 @@ pub struct TraderAccountStatusUpdateBodySbModel {
     pub phase: i32,
 
     #[prost(string, tag = "8")]
-    pub trader_account_aggregate_id: String,
+    pub trader_account_aggregated_id: String,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

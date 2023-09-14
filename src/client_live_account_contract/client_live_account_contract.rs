@@ -10,7 +10,7 @@ pub struct ClientLiveAccountContractUpdateBodySbModel{
     #[prost(string, tag = "1")]
     pub client_id: String,
     #[prost(string, tag = "2")]
-    pub trader_account_aggregate_id: String,
+    pub trader_account_aggregated_id: String,
     #[prost(string, tag = "3")]
     pub contract_id: String,
     #[prost(enumeration="ContractStatus", tag = "4")]
