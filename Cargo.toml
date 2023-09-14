@@ -17,6 +17,7 @@ metatrader-account-open-position = []
 metatrader-account-deleted = []
 sumsub-status-update = []
 metatrader-eod-update = []
+client-live-account-contract = []
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]

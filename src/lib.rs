@@ -72,3 +72,9 @@ mod metatrader_eod_update;
 
 #[cfg(feature = "metatrader-eod-update")]
 pub use metatrader_eod_update   ::*;
+
+#[cfg(feature = "client-live-account-contract")]
+mod client_live_account_contract;
+
+#[cfg(feature = "client-live-account-contract")]
+pub use client_live_account_contract::*;
