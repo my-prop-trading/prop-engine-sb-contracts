@@ -37,12 +37,6 @@ mod trading_scenario_update;
 #[cfg(feature = "trading-scenario-update")]
 pub use trading_scenario_update::*;
 
-#[cfg(feature = "trader-account-open-position")]
-mod trader_account_open_position;
-
-#[cfg(feature = "trader-account-open-position")]
-pub use trader_account_open_position::*;
-
 #[cfg(feature = "account-kyc-update")]
 mod account_kyc_update;
 
