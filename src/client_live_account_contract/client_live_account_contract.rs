@@ -15,7 +15,7 @@ pub struct ClientLiveAccountContractUpdateBodySbModel{
     pub contract_id: String,
     #[prost(enumeration="ContractStatus", tag = "4")]
     pub status: i32,
-    #[prost(string, tag = "5")]
+    #[prost(string, optional, tag = "5")]
     pub description: Option<String>,
 }
 
