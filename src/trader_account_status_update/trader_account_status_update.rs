@@ -33,6 +33,9 @@ pub struct TraderAccountStatusUpdateBodySbModel {
 
     #[prost(string, tag = "8")]
     pub trader_account_aggregated_id: String,
+
+    #[prost(string, tag = "9")]
+    pub trading_package_id: String,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
