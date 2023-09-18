@@ -7,7 +7,7 @@ pub struct SumsubUpdateSbModel {
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
-pub enum ReviewStatus {
+pub enum SumsubReviewStatus {
     Init = 0,
     Pending = 1,
     Prechecked = 2,
@@ -18,14 +18,14 @@ pub enum ReviewStatus {
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
-pub enum ProofType {
+pub enum SumsubProofType {
     ProofOfAddress = 0,
     ProofOfIdentity = 1,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
-pub enum NotificationType {
+pub enum SumsubNotificationType {
     Reviewed = 0,
     Pending = 1,
     Created = 2,
@@ -53,10 +53,10 @@ pub struct SumsubUpdateBodySbModel {
     pub applicant_id: String,
     #[prost(int64, tag = "4")]
     pub created_at: i64,
-    #[prost(enumeration="NotificationType", tag = "5")]
+    #[prost(enumeration="SumsubNotificationType", tag = "5")]
     pub notification_type: i32,
-    #[prost(enumeration = "ProofType", tag = "6")]
+    #[prost(enumeration = "SumsubProofType", tag = "6")]
     pub proof_type: i32,
-    #[prost(enumeration="ReviewStatus", tag = "7")]
+    #[prost(enumeration="SumsubReviewStatus", tag = "7")]
     pub review_status: i32
 }
