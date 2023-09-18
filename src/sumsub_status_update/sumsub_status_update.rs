@@ -60,3 +60,51 @@ pub struct SumsubUpdateBodySbModel {
     #[prost(enumeration="SumsubReviewStatus", tag = "7")]
     pub review_status: i32
 }
+
+
+impl Into<SumsubProofType> for i32 {
+    fn into(self) -> SumsubProofType {
+        match &*self {
+            0 => SumsubProofType::ProofOfAddress,
+            1 => SumsubProofType::ProofOfIdentity,
+            _ => panic!("Unknown SumsubProofType: {}", &*self),
+        }
+    }
+}
+
+impl Into<SumsubReviewStatus> for i32 {
+    fn into(self) -> SumsubReviewStatus {
+        match &*self {
+            0 => SumsubReviewStatus::Init,
+            1 => SumsubReviewStatus::Pending,
+            2 => SumsubReviewStatus::Prechecked,
+            3 => SumsubReviewStatus::Queued,
+            4 => SumsubReviewStatus::Completed,
+            5 => SumsubReviewStatus::OnHold,
+            _ => panic!("Unknown SumsubReviewStatus: {}", &*self),
+        }
+    }
+}
+
+impl Into<SumsubNotificationType> for i32{
+    fn into(self) -> SumsubNotificationType {
+        match &*self {
+            0 => SumsubNotificationType::Reviewed,
+            1 => SumsubNotificationType::Pending,
+            2 => SumsubNotificationType::Created,
+            3 => SumsubNotificationType::OnHold,
+            4 => SumsubNotificationType::PersonalInfoChanged,
+            5 => SumsubNotificationType::Prechecked,
+            6 => SumsubNotificationType::Deleted,
+            7 => SumsubNotificationType::LevelChanged,
+            8 => SumsubNotificationType::VideoIdentStatusChanged,
+            9 => SumsubNotificationType::Reset,
+            10 => SumsubNotificationType::ActionPending,
+            11 => SumsubNotificationType::ActionReviewed,
+            12 => SumsubNotificationType::ActionOnHold,
+            13 => SumsubNotificationType::TravelRuleStatusChanged,
+            14 => SumsubNotificationType::WorkflowCompleted,
+            _ => panic!("Unknown SumsubNotificationType: {}", &*self),
+        }
+    }
+}
