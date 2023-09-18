@@ -36,6 +36,9 @@ pub struct TraderAccountStatusUpdateBodySbModel {
 
     #[prost(string, tag = "9")]
     pub trading_package_id: String,
+
+    #[prost(int64, tag = "10")]
+    pub e_tag: i64,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
@@ -45,4 +48,5 @@ pub enum TraderAccountStatus {
     Active = 1,
     Disabled = 2,
     StageCompleted = 3,
+    Blocked = 4,
 }
