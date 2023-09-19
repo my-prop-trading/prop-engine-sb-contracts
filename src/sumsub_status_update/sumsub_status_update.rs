@@ -64,31 +64,31 @@ pub struct SumsubUpdateBodySbModel {
 
 impl Into<SumsubProofType> for i32 {
     fn into(self) -> SumsubProofType {
-        match &*self {
+        match self {
             0 => SumsubProofType::ProofOfAddress,
             1 => SumsubProofType::ProofOfIdentity,
-            _ => panic!("Unknown SumsubProofType: {}", &*self),
+            _ => panic!("Unknown SumsubProofType: {}", self),
         }
     }
 }
 
 impl Into<SumsubReviewStatus> for i32 {
     fn into(self) -> SumsubReviewStatus {
-        match &*self {
+        match self {
             0 => SumsubReviewStatus::Init,
             1 => SumsubReviewStatus::Pending,
             2 => SumsubReviewStatus::Prechecked,
             3 => SumsubReviewStatus::Queued,
             4 => SumsubReviewStatus::Completed,
             5 => SumsubReviewStatus::OnHold,
-            _ => panic!("Unknown SumsubReviewStatus: {}", &*self),
+            _ => panic!("Unknown SumsubReviewStatus: {}", self),
         }
     }
 }
 
 impl Into<SumsubNotificationType> for i32{
     fn into(self) -> SumsubNotificationType {
-        match &*self {
+        match self {
             0 => SumsubNotificationType::Reviewed,
             1 => SumsubNotificationType::Pending,
             2 => SumsubNotificationType::Created,
@@ -104,7 +104,15 @@ impl Into<SumsubNotificationType> for i32{
             12 => SumsubNotificationType::ActionOnHold,
             13 => SumsubNotificationType::TravelRuleStatusChanged,
             14 => SumsubNotificationType::WorkflowCompleted,
-            _ => panic!("Unknown SumsubNotificationType: {}", &*self),
+            _ => panic!("Unknown SumsubNotificationType: {}", self),
         }
+    }
+}
+
+pub fn i32_to_sumsub_proof_type(value: i32) -> SumsubProofType {
+    match value {
+        0 => SumsubProofType::ProofOfAddress,
+        1 => SumsubProofType::ProofOfIdentity,
+        _ => panic!("Unknown SumsubProofType: {}", value),
     }
 }
