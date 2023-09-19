@@ -61,16 +61,6 @@ pub struct SumsubUpdateBodySbModel {
     pub review_status: i32,
 }
 
-impl Into<SumsubProofType> for i32 {
-    fn into(self) -> SumsubProofType {
-        match self {
-            0 => SumsubProofType::ProofOfAddress,
-            1 => SumsubProofType::ProofOfIdentity,
-            _ => panic!("Unknown SumsubProofType: {}", self),
-        }
-    }
-}
-
 pub fn i32_to_sumsub_review_status(value: i32) -> SumsubReviewStatus {
     match value {
         0 => SumsubReviewStatus::Init,
