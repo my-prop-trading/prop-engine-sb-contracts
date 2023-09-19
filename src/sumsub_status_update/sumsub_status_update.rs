@@ -11,7 +11,7 @@ pub enum SumsubReviewStatus {
     Init = 0,
     Pending = 1,
     Prechecked = 2,
-    Queued =3,
+    Queued = 3,
     Completed = 4,
     OnHold = 5,
 }
@@ -53,14 +53,13 @@ pub struct SumsubUpdateBodySbModel {
     pub applicant_id: String,
     #[prost(int64, tag = "4")]
     pub created_at: i64,
-    #[prost(enumeration="SumsubNotificationType", tag = "5")]
+    #[prost(enumeration = "SumsubNotificationType", tag = "5")]
     pub notification_type: i32,
     #[prost(enumeration = "SumsubProofType", tag = "6")]
     pub proof_type: i32,
-    #[prost(enumeration="SumsubReviewStatus", tag = "7")]
-    pub review_status: i32
+    #[prost(enumeration = "SumsubReviewStatus", tag = "7")]
+    pub review_status: i32,
 }
-
 
 impl Into<SumsubProofType> for i32 {
     fn into(self) -> SumsubProofType {
@@ -72,40 +71,36 @@ impl Into<SumsubProofType> for i32 {
     }
 }
 
-impl Into<SumsubReviewStatus> for i32 {
-    fn into(self) -> SumsubReviewStatus {
-        match self {
-            0 => SumsubReviewStatus::Init,
-            1 => SumsubReviewStatus::Pending,
-            2 => SumsubReviewStatus::Prechecked,
-            3 => SumsubReviewStatus::Queued,
-            4 => SumsubReviewStatus::Completed,
-            5 => SumsubReviewStatus::OnHold,
-            _ => panic!("Unknown SumsubReviewStatus: {}", self),
-        }
+pub fn i32_to_sumsub_review_status(value: i32) -> SumsubReviewStatus {
+    match value {
+        0 => SumsubReviewStatus::Init,
+        1 => SumsubReviewStatus::Pending,
+        2 => SumsubReviewStatus::Prechecked,
+        3 => SumsubReviewStatus::Queued,
+        4 => SumsubReviewStatus::Completed,
+        5 => SumsubReviewStatus::OnHold,
+        _ => panic!("Unknown SumsubReviewStatus: {}", value),
     }
 }
 
-impl Into<SumsubNotificationType> for i32{
-    fn into(self) -> SumsubNotificationType {
-        match self {
-            0 => SumsubNotificationType::Reviewed,
-            1 => SumsubNotificationType::Pending,
-            2 => SumsubNotificationType::Created,
-            3 => SumsubNotificationType::OnHold,
-            4 => SumsubNotificationType::PersonalInfoChanged,
-            5 => SumsubNotificationType::Prechecked,
-            6 => SumsubNotificationType::Deleted,
-            7 => SumsubNotificationType::LevelChanged,
-            8 => SumsubNotificationType::VideoIdentStatusChanged,
-            9 => SumsubNotificationType::Reset,
-            10 => SumsubNotificationType::ActionPending,
-            11 => SumsubNotificationType::ActionReviewed,
-            12 => SumsubNotificationType::ActionOnHold,
-            13 => SumsubNotificationType::TravelRuleStatusChanged,
-            14 => SumsubNotificationType::WorkflowCompleted,
-            _ => panic!("Unknown SumsubNotificationType: {}", self),
-        }
+pub fn i32_to_sumsub_notification_type(value: i32) -> SumsubNotificationType {
+    match value {
+        0 => SumsubNotificationType::Reviewed,
+        1 => SumsubNotificationType::Pending,
+        2 => SumsubNotificationType::Created,
+        3 => SumsubNotificationType::OnHold,
+        4 => SumsubNotificationType::PersonalInfoChanged,
+        5 => SumsubNotificationType::Prechecked,
+        6 => SumsubNotificationType::Deleted,
+        7 => SumsubNotificationType::LevelChanged,
+        8 => SumsubNotificationType::VideoIdentStatusChanged,
+        9 => SumsubNotificationType::Reset,
+        10 => SumsubNotificationType::ActionPending,
+        11 => SumsubNotificationType::ActionReviewed,
+        12 => SumsubNotificationType::ActionOnHold,
+        13 => SumsubNotificationType::TravelRuleStatusChanged,
+        14 => SumsubNotificationType::WorkflowCompleted,
+        _ => panic!("Unknown SumsubNotificationType: {}", value),
     }
 }
 
