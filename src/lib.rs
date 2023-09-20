@@ -72,3 +72,9 @@ mod client_live_account_contract;
 
 #[cfg(feature = "client-live-account-contract")]
 pub use client_live_account_contract::*;
+
+#[cfg(feature = "client-kyc-update")]
+mod client_kyc_update;
+
+#[cfg(feature = "client-kyc-update")]
+pub use client_kyc_update::*;
