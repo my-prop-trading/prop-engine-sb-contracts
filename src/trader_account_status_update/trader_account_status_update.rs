@@ -1,8 +1,9 @@
 use crate::common::TradingPlatform; 
 use crate::common::Broker;
 
+service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[derive(Clone, PartialEq, ::prost::Message)]
-#[my_service_bus_macros::my_sb_entity_protobuf_model(topic_id = "trader-account-status-update")]
+#[my_sb_entity_protobuf_model(topic_id = "trader-account-status-update")]
 pub struct TraderAccountStatusUpdateSbModel {
     #[prost(message, tag = "1")]
     pub event: Option<TraderAccountStatusUpdateBodySbModel>,

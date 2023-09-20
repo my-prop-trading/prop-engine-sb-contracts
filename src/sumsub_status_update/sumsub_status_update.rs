@@ -1,5 +1,6 @@
+service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[derive(Clone, PartialEq, ::prost::Message)]
-#[my_service_bus_macros::my_sb_entity_protobuf_model(topic_id = "sumsub-status-update")]
+#[my_sb_entity_protobuf_model(topic_id = "sumsub-status-update")]
 pub struct SumsubUpdateSbModel {
     #[prost(message, tag = "1")]
     pub event: Option<SumsubUpdateBodySbModel>,

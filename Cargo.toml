@@ -1,9 +1,13 @@
 [package]
 name = "prop-engine-sb-contracts"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 
 [features]
+
+default = [
+]
+
 account-registration = []
 payment-order = []
 trader-account-creation = []
@@ -18,11 +22,15 @@ sumsub-status-update = []
 metatrader-eod-update = []
 client-live-account-contract = []
 client-kyc-update = []
+
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-my-service-bus-abstractions = { tag = "0.1.1", git = "https://github.com/MyJetTools/my-service-bus-abstractions.git" }
-my-service-bus-macros = { tag = "0.1.0", git = "https://github.com/MyJetTools/my-service-bus-macros.git" }
+service-sdk = { tag = "0.2.3", git = "https://github.com/MyJetTools/service-sdk.git", features = [
+    "my-service-bus",
+    "macros",
+] }
 
 prost = "*"
 prost-types = "*"
