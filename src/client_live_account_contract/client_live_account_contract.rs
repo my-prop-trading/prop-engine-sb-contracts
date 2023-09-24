@@ -18,6 +18,8 @@ pub struct ClientLiveAccountContractUpdateBodySbModel{
     pub client_id: String,
     #[prost(string, tag = "5")]
     pub brand: String,
+    #[prost(string, tag = "6")]
+    pub contract_id: String,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
@@ -31,4 +33,7 @@ pub enum ClientLiveAccountContractStatus{
     RejectedAndBlocked = 5,
     Uploaded = 6,
     Downloaded = 7,
+    SendContractToClient = 8,
+    SendServiceDeniedDueToViolationTermsAndCondOnContractSigning= 8,
+    SendServiceDeniedOnAllAccountsDueToViolationTermsAndCond = 9,
 }
