@@ -15,6 +15,8 @@ pub struct ClientLiveAccountContractUpdateBodySbModel{
     pub description: Option<String>,
     #[prost(string, tag = "4")]
     pub client_id: String,
+    #[prost(string, tag = "5")]
+    pub brand: String,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
