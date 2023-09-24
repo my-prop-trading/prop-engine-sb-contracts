@@ -34,6 +34,6 @@ pub enum ClientLiveAccountContractStatus{
     Uploaded = 6,
     Downloaded = 7,
     SendContractToClient = 8,
-    SendServiceDeniedDueToViolationTermsAndCondOnContractSigning= 8,
-    SendServiceDeniedOnAllAccountsDueToViolationTermsAndCond = 9,
+    SendServiceDeniedDueToViolationTermsAndCondOnContractSigning= 9,
+    SendServiceDeniedOnAllAccountsDueToViolationTermsAndCond = 10,
 }
