@@ -14,6 +14,8 @@ pub struct ClientKycUpdateBodySbModel {
     pub updated_at: i64,
     #[prost(enumeration="ClientKycUpdateStatus", tag = "3")]
     pub status: i32,
+    #[prost(string, tag = "4")]
+    pub brand: String,
 }
 
 
