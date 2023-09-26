@@ -26,6 +26,20 @@ pub enum SumsubProofType {
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
+pub enum SumsubReviewAnswerStatus {
+    Green = 0,
+    Red = 1,
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum SumsubReviewRejectStatus {
+    Final = 0,
+    Retry = 1,
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
 pub enum SumsubNotificationType {
     Reviewed = 0,
     Pending = 1,
@@ -60,6 +74,10 @@ pub struct SumsubUpdateBodySbModel {
     pub proof_type: i32,
     #[prost(enumeration = "SumsubReviewStatus", tag = "7")]
     pub review_status: i32,
+    #[prost(enumeration = "SumsubReviewAnswerStatus", tag = "8")]
+    pub review_answer_status: i32,
+    #[prost(enumeration = "SumsubReviewRejectStatus", tag = "9")]
+    pub review_reject_status: i32,
 }
 
 pub fn i32_to_sumsub_review_status(value: i32) -> SumsubReviewStatus {
@@ -100,5 +118,23 @@ pub fn i32_to_sumsub_proof_type(value: i32) -> SumsubProofType {
         0 => SumsubProofType::ProofOfAddress,
         1 => SumsubProofType::ProofOfIdentity,
         _ => panic!("Unknown SumsubProofType: {}", value),
+    }
+}
+
+
+pub fn i32_to_sumsub_review_answer_status(value: i32) -> SumsubReviewAnswerStatus {
+    match value {
+        0 => SumsubReviewAnswerStatus::Green,
+        1 => SumsubReviewAnswerStatus::Red,
+        _ => panic!("Unknown SumsubReviewAnswerStatus: {}", value),
+    }
+}
+
+
+pub fn i32_to_sumsub_review_reject_status(value: i32) -> SumsubReviewRejectStatus {
+    match value {
+        0 => SumsubReviewRejectStatus::Final,
+        1 => SumsubReviewRejectStatus::Retry,
+        _ => panic!("Unknown SumsubReviewRejectStatus: {}", value),
     }
 }
