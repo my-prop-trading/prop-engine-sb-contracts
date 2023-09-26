@@ -23,19 +23,19 @@ pub enum SumsubProofType {
     ProofOfIdentity = 1,
 }
 
-// #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
-// #[repr(i32)]
-// pub enum SumsubReviewAnswerStatus {
-//     Green = 0,
-//     Red = 1,
-// }
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum SumsubReviewAnswerStatus {
+    Green = 0,
+    Red = 1,
+}
 
-// #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
-// #[repr(i32)]
-// pub enum SumsubReviewRejectStatus {
-//     Final = 0,
-//     Retry = 1,
-// }
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum SumsubReviewRejectStatus {
+    Final = 0,
+    Retry = 1,
+}
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
@@ -58,15 +58,15 @@ pub enum SumsubNotificationType {
 }
 
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct SumsubUpdateCompletedBodySbModel {
-    // #[prost(enumeration = "SumsubReviewAnswerStatus", tag = "1")]
-    // pub answer_status: i32,
-    // #[prost(enumeration = "SumsubReviewRejectStatus", tag = "2")]
-    // pub reject_status: i32,
-    #[prost(tag = "1")]
-    pub answer_status: Option<String>,
-    #[prost(tag = "2")]
-    pub reject_status: Option<String>,
+pub struct SumsubUpdateBodyCompletedSbModel {
+    #[prost(enumeration = "SumsubReviewAnswerStatus", tag = "1")]
+    pub answer_status: i32,
+}
+
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SumsubUpdateBodyRejectedSbModel {
+    #[prost(enumeration = "SumsubReviewRejectStatus", tag = "1")]
+    pub reject_status: i32,
 }
 
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -85,12 +85,11 @@ pub struct SumsubUpdateBodySbModel {
     pub proof_type: i32,
     #[prost(enumeration = "SumsubReviewStatus", tag = "7")]
     pub review_status: i32,
-    // #[prost(tag = "8")]
-    // pub review_answer_status: Option<SumsubUpdateCompletedBodySbModel>,
-    #[prost(tag = "9")]
-    pub review_answer_status: Option<String>,
-    #[prost(tag = "10")]
-    pub review_reject_status: Option<String>,
+    #[prost(message, tag = "8")]
+    pub completed_answer_status: Option<SumsubUpdateBodyCompletedSbModel>,
+    #[prost(message, tag = "9")]
+    pub completed_answer_reject_status: Option<SumsubUpdateBodyRejectedSbModel>,
+
 }
 
 pub fn i32_to_sumsub_review_status(value: i32) -> SumsubReviewStatus {
