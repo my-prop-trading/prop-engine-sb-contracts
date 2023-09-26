@@ -1,6 +1,5 @@
-service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[derive(Clone, PartialEq, ::prost::Message)]
-#[my_sb_entity_protobuf_model(topic_id = "sumsub-status-update")]
+#[my_service_bus_macros::my_sb_entity_protobuf_model(topic_id = "sumsub-status-update")]
 pub struct SumsubUpdateSbModel {
     #[prost(message, tag = "1")]
     pub event: Option<SumsubUpdateBodySbModel>,
@@ -22,13 +21,6 @@ pub enum SumsubReviewStatus {
 pub enum SumsubProofType {
     ProofOfAddress = 0,
     ProofOfIdentity = 1,
-}
-
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
-#[repr(i32)]
-pub enum SumsubReviewAnswerStatus {
-    Green = 0,
-    Red = 1,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
@@ -58,21 +50,26 @@ pub enum SumsubNotificationType {
     WorkflowCompleted = 14,
 }
 
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct CompletedSuccessfulSbModel {
+pub struct CompletedSuccessfulSbModel {}
 
-}
-
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CompletedRejectedSbModel {
-    #[prost(optional, enumeration = "SumsubReviewRejectStatus", tag = "2")]
+    #[prost(enumeration = "SumsubReviewRejectStatus", tag = "1")]
     pub reject_status: i32,
 }
 
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
-pub enum CompletedStatusSbModel {
-    Successful(CompletedSuccessfulSbModel),
-    Rejected(CompletedRejectedSbModel),
+pub mod completed_status {
+    #[allow(clippy::derive_partial_eq_without_eq)]
+    #[derive(Clone, PartialEq, ::prost::Oneof)]
+    pub enum CompletedStatusSbModel {
+        #[prost(message, tag = "1")]
+        Successful(super::CompletedSuccessfulSbModel),
+        #[prost(message, tag = "2")]
+        Rejected(super::CompletedRejectedSbModel),
+    }
 }
 
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -91,8 +88,8 @@ pub struct SumsubUpdateBodySbModel {
     pub proof_type: i32,
     #[prost(enumeration = "SumsubReviewStatus", tag = "7")]
     pub review_status: i32,
-    #[prost(optional, enumeration = "CompletedStatusSbModel", tag = "8")]
-    pub completed_answer_status: Option<CompletedStatusSbModel>,
+    #[prost(oneof = "completed_status_model::CompletedStatusSbModel", tags = "8, 9")]
+    pub completed_status: Option<completed_status_model::CompletedStatusSbModel>,
 }
 
 pub fn i32_to_sumsub_review_status(value: i32) -> SumsubReviewStatus {
@@ -135,16 +132,6 @@ pub fn i32_to_sumsub_proof_type(value: i32) -> SumsubProofType {
         _ => panic!("Unknown SumsubProofType: {}", value),
     }
 }
-
-
-pub fn i32_to_sumsub_review_answer_status(value: i32) -> SumsubReviewAnswerStatus {
-    match value {
-        0 => SumsubReviewAnswerStatus::Green,
-        1 => SumsubReviewAnswerStatus::Red,
-        _ => panic!("Unknown SumsubReviewAnswerStatus: {}", value),
-    }
-}
-
 
 pub fn i32_to_sumsub_review_reject_status(value: i32) -> SumsubReviewRejectStatus {
     match value {
