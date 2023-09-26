@@ -26,13 +26,6 @@ pub enum SumsubProofType {
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
-pub enum SumsubReviewAnswerStatus {
-    Green = 0,
-    Red = 1,
-}
-
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
-#[repr(i32)]
 pub enum SumsubReviewRejectStatus {
     Final = 0,
     Retry = 1,
@@ -58,13 +51,26 @@ pub enum SumsubNotificationType {
     WorkflowCompleted = 14,
 }
 
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct SumsubUpdateBodyCompletedSbModel {
-    #[prost(enumeration = "SumsubReviewAnswerStatus", tag = "1")]
-    pub answer_status: i32,
+pub struct CompletedSuccessfulSbModel {}
 
-    #[prost(optional, enumeration = "SumsubReviewRejectStatus", tag = "2")]
-    pub reject_status: Option<i32>,
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct CompletedRejectedSbModel {
+    #[prost(enumeration = "SumsubReviewRejectStatus", tag = "1")]
+    pub reject_status: i32,
+}
+
+pub mod completed_status_model {
+    #[allow(clippy::derive_partial_eq_without_eq)]
+    #[derive(Clone, PartialEq, ::prost::Oneof)]
+    pub enum CompletedStatusSbModel {
+        #[prost(message, tag = "1")]
+        Successful(super::CompletedSuccessfulSbModel),
+        #[prost(message, tag = "2")]
+        Rejected(super::CompletedRejectedSbModel),
+    }
 }
 
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -83,8 +89,8 @@ pub struct SumsubUpdateBodySbModel {
     pub proof_type: i32,
     #[prost(enumeration = "SumsubReviewStatus", tag = "7")]
     pub review_status: i32,
-    #[prost(message, tag = "8")]
-    pub completed_answer_status: Option<SumsubUpdateBodyCompletedSbModel>,
+    #[prost(oneof = "completed_status_model::CompletedStatusSbModel", tags = "8, 9")]
+    pub completed_status: Option<completed_status_model::CompletedStatusSbModel>,
 }
 
 pub fn i32_to_sumsub_review_status(value: i32) -> SumsubReviewStatus {
@@ -127,16 +133,6 @@ pub fn i32_to_sumsub_proof_type(value: i32) -> SumsubProofType {
         _ => panic!("Unknown SumsubProofType: {}", value),
     }
 }
-
-
-pub fn i32_to_sumsub_review_answer_status(value: i32) -> SumsubReviewAnswerStatus {
-    match value {
-        0 => SumsubReviewAnswerStatus::Green,
-        1 => SumsubReviewAnswerStatus::Red,
-        _ => panic!("Unknown SumsubReviewAnswerStatus: {}", value),
-    }
-}
-
 
 pub fn i32_to_sumsub_review_reject_status(value: i32) -> SumsubReviewRejectStatus {
     match value {
