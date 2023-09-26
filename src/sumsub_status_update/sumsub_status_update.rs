@@ -58,6 +58,14 @@ pub enum SumsubNotificationType {
 }
 
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SumsubUpdateCompletedBodySbModel {
+    #[prost(enumeration = "SumsubReviewAnswerStatus", tag = "1")]
+    pub answer_status: i32,
+    #[prost(enumeration = "SumsubReviewRejectStatus", tag = "2")]
+    pub reject_status: i32,
+}
+
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SumsubUpdateBodySbModel {
     #[prost(string, tag = "1")]
     pub client_id: String,
@@ -73,10 +81,8 @@ pub struct SumsubUpdateBodySbModel {
     pub proof_type: i32,
     #[prost(enumeration = "SumsubReviewStatus", tag = "7")]
     pub review_status: i32,
-    #[prost(enumeration = "SumsubReviewAnswerStatus", tag = "8")]
-    pub review_answer_status: Option<SumsubReviewAnswerStatus>,
-    #[prost(enumeration = "SumsubReviewRejectStatus", tag = "9")]
-    pub review_reject_status: Option<SumsubReviewRejectStatus>,
+    #[prost(tag = "8")]
+    pub review_answer_status: Option<SumsubUpdateCompletedBodySbModel>,
 }
 
 pub fn i32_to_sumsub_review_status(value: i32) -> SumsubReviewStatus {
