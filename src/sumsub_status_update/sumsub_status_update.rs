@@ -74,9 +74,9 @@ pub struct SumsubUpdateBodySbModel {
     #[prost(enumeration = "SumsubReviewStatus", tag = "7")]
     pub review_status: i32,
     #[prost(enumeration = "SumsubReviewAnswerStatus", tag = "8")]
-    pub review_answer_status: i32,
+    pub review_answer_status: Option<i32>,
     #[prost(enumeration = "SumsubReviewRejectStatus", tag = "9")]
-    pub review_reject_status: i32,
+    pub review_reject_status: Option<i32>,
 }
 
 pub fn i32_to_sumsub_review_status(value: i32) -> SumsubReviewStatus {
