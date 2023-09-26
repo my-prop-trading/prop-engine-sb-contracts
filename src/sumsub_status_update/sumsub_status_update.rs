@@ -61,7 +61,7 @@ pub struct CompletedRejectedSbModel {
     pub reject_status: i32,
 }
 
-pub mod completed_status {
+pub mod completed_status_model {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum CompletedStatusSbModel {
