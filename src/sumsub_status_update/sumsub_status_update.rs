@@ -1,5 +1,6 @@
+service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[derive(Clone, PartialEq, ::prost::Message)]
-#[my_service_bus_macros::my_sb_entity_protobuf_model(topic_id = "sumsub-status-update")]
+#[my_sb_entity_protobuf_model(topic_id = "sumsub-status-update")]
 pub struct SumsubUpdateSbModel {
     #[prost(message, tag = "1")]
     pub event: Option<SumsubUpdateBodySbModel>,
@@ -58,12 +59,20 @@ pub enum SumsubNotificationType {
 }
 
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct SumsubUpdateBodyCompletedSbModel {
-    #[prost(enumeration = "SumsubReviewAnswerStatus", tag = "1")]
-    pub answer_status: i32,
+pub struct CompletedSuccessfulSbModel {
 
+}
+
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct CompletedRejectedSbModel {
     #[prost(optional, enumeration = "SumsubReviewRejectStatus", tag = "2")]
-    pub reject_status: Option<i32>,
+    pub reject_status: i32,
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+pub enum CompletedStatusSbModel {
+    Successful(CompletedSuccessfulSbModel),
+    Rejected(CompletedRejectedSbModel),
 }
 
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -82,8 +91,8 @@ pub struct SumsubUpdateBodySbModel {
     pub proof_type: i32,
     #[prost(enumeration = "SumsubReviewStatus", tag = "7")]
     pub review_status: i32,
-    #[prost(message, tag = "8")]
-    pub completed_answer_status: Option<SumsubUpdateBodyCompletedSbModel>,
+    #[prost(optional, enumeration = "CompletedStatusSbModel", tag = "8")]
+    pub completed_answer_status: Option<CompletedStatusSbModel>,
 }
 
 pub fn i32_to_sumsub_review_status(value: i32) -> SumsubReviewStatus {
