@@ -61,13 +61,16 @@ pub enum SumsubNotificationType {
 pub struct SumsubUpdateBodyCompletedSbModel {
     #[prost(enumeration = "SumsubReviewAnswerStatus", tag = "1")]
     pub answer_status: i32,
+
+    #[prost(optional, enumeration = "SumsubReviewRejectStatus", tag = "1")]
+    pub reject_status: Option<i32>,
 }
 
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct SumsubUpdateBodyRejectedSbModel {
-    #[prost(enumeration = "SumsubReviewRejectStatus", tag = "1")]
-    pub reject_status: i32,
-}
+// #[derive(Clone, PartialEq, ::prost::Message)]
+// pub struct SumsubUpdateBodyRejectedSbModel {
+//     #[prost(enumeration = "SumsubReviewRejectStatus", tag = "1")]
+//     pub reject_status: i32,
+// }
 
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SumsubUpdateBodySbModel {
@@ -87,8 +90,8 @@ pub struct SumsubUpdateBodySbModel {
     pub review_status: i32,
     #[prost(message, tag = "8")]
     pub completed_answer_status: Option<SumsubUpdateBodyCompletedSbModel>,
-    #[prost(message, tag = "9")]
-    pub completed_answer_reject_status: Option<SumsubUpdateBodyRejectedSbModel>,
+    // #[prost(message, tag = "9")]
+    // pub completed_answer_reject_status: Option<SumsubUpdateBodyRejectedSbModel>,
 
 }
 
