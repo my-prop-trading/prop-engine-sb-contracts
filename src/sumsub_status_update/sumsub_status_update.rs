@@ -217,12 +217,12 @@ impl SumsubReviewStatus {
     /// Creates an enum from field names used in the ProtoBuf definition.
     pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
         match value {
-            "Init" => Some(Self::SrsInit),
-            "Pending" => Some(Self::SrsPending),
-            "Prechecked" => Some(Self::SrsPrechecked),
-            "Queued" => Some(Self::SrsQueued),
-            "Completed" => Some(Self::SrsCompleted),
-            "OnHold" => Some(Self::SrsOnHold),
+            "Init" => Some(Self::Init),
+            "Pending" => Some(Self::Pending),
+            "Prechecked" => Some(Self::Prechecked),
+            "Queued" => Some(Self::Queued),
+            "Completed" => Some(Self::Completed),
+            "OnHold" => Some(Self::OnHold),
             _ => None,
         }
     }
