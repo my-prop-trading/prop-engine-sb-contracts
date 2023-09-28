@@ -1,4 +1,6 @@
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
+pub use crate::completed_status_model::CompletedStatusSbModel;
+
 #[derive(Clone, PartialEq, ::prost::Message)]
 #[my_sb_entity_protobuf_model(topic_id = "sumsub-status-update")]
 pub struct SumsubUpdateSbModel {
