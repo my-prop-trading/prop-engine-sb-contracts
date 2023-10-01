@@ -1,4 +1,6 @@
+service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[allow(clippy::derive_partial_eq_without_eq)]
+#[my_sb_entity_protobuf_model(topic_id = "sumsub-status-update")]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SumsubUpdateSbModel {
     #[prost(oneof = "sumsub_update_sb_model::Response", tags = "1, 2, 3")]
