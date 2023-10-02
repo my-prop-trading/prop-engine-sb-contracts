@@ -133,28 +133,6 @@ impl SumsubNotificationType {
             _ => None,
         }
     }
-
-    pub fn from_i32(value: i32) -> ::core::option::Option<Self>  {
-        match value {
-            0 => Some(Self::Reviewed),
-            1 => Some(Self::Pending),
-            2 => Some(Self::Created),
-            3 => Some(Self::OnHold),
-            4 => Some(Self::PersonalInfoChanged),
-            5 => Some(Self::Prechecked),
-            6 => Some(Self::Deleted),
-            7 => Some(Self::LevelChanged),
-            8 => Some(Self::VideoIdentStatusChanged),
-            9 => Some(Self::Reset),
-            10 => Some(Self::ActionPending),
-            11 => Some(Self::ActionReviewed),
-            12 => Some(Self::ActionOnHold),
-            13 => Some(Self::TravelRuleStatusChanged),
-            14 => Some(Self::WorkflowCompleted),
-            _ => None,
-        }
-    }
-    
 }
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
@@ -177,14 +155,6 @@ impl SumsubReviewRejectStatus {
             _ => None,
         }
     }
-
-    pub fn from_i32(value: i32) -> ::core::option::Option<Self> {
-        match value {
-            0 => Some(Self::Final),
-            1 => Some(Self::Retry),
-            _ => None,
-        }
-    }
 }
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
@@ -204,14 +174,6 @@ impl SumsubProofType {
         match value {
             "ProofOfAddress" => Some(Self::ProofOfAddress),
             "ProofOfIdentity" => Some(Self::ProofOfIdentity),
-            _ => None,
-        }
-    }
-
-    pub fn from_i32(value: i32) -> ::core::option::Option<Self> {
-        match value {
-            0 => Some(Self::ProofOfAddress),
-            1 => Some(Self::ProofOfIdentity),
             _ => None,
         }
     }
@@ -247,18 +209,6 @@ impl SumsubReviewStatus {
             "Queued" => Some(Self::Queued),
             "Completed" => Some(Self::Completed),
             "OnHold" => Some(Self::OnHold),
-            _ => None,
-        }
-    }
-
-    pub fn from_i32(value: i32) -> ::core::option::Option<Self> {
-        match value {
-            0 => Some(Self::Init),
-            1 => Some(Self::Pending),
-            2 => Some(Self::Prechecked),
-            3 => Some(Self::Queued),
-            4 => Some(Self::Completed),
-            5 => Some(Self::OnHold),
             _ => None,
         }
     }
