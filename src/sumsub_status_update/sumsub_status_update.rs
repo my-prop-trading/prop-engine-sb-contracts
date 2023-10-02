@@ -2,7 +2,9 @@
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SumsubUpdateSbModel {
-    #[prost(oneof = "sumsub_update_sb_model::Response", tags = "1, 2, 3")]
+    #[prost(enumeration = "SumsubProofType", tag = "1")]
+    pub proof_type: i32,
+    #[prost(oneof = "sumsub_update_sb_model::Response", tags = "2, 3, 4")]
     pub response: ::core::option::Option<sumsub_update_sb_model::Response>,
 }
 /// Nested message and enum types in `SumsubUpdateSbModel`.
@@ -51,9 +53,7 @@ pub struct SumsubUpdateBodySbModel {
     pub created_at: i64,
     #[prost(enumeration = "SumsubNotificationType", tag = "5")]
     pub notification_type: i32,
-    #[prost(enumeration = "SumsubProofType", tag = "6")]
-    pub proof_type: i32,
-    #[prost(enumeration = "SumsubReviewStatus", tag = "7")]
+    #[prost(enumeration = "SumsubReviewStatus", tag = "6")]
     pub review_status: i32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -93,10 +93,6 @@ pub enum SumsubNotificationType {
     WorkflowCompleted = 14,
 }
 impl SumsubNotificationType {
-    /// String value of the enum field names used in the ProtoBuf definition.
-    ///
-    /// The values are not transformed in any way and thus are considered stable
-    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
     pub fn as_str_name(&self) -> &'static str {
         match self {
             SumsubNotificationType::Reviewed => "Reviewed",
@@ -137,6 +133,28 @@ impl SumsubNotificationType {
             _ => None,
         }
     }
+
+    pub fn from_i32(value: i32) -> ::core::option::Option<Self>  {
+        match value {
+            0 => Some(Self::Reviewed),
+            1 => Some(Self::Pending),
+            2 => Some(Self::Created),
+            3 => Some(Self::OnHold),
+            4 => Some(Self::PersonalInfoChanged),
+            5 => Some(Self::Prechecked),
+            6 => Some(Self::Deleted),
+            7 => Some(Self::LevelChanged),
+            8 => Some(Self::VideoIdentStatusChanged),
+            9 => Some(Self::Reset),
+            10 => Some(Self::ActionPending),
+            11 => Some(Self::ActionReviewed),
+            12 => Some(Self::ActionOnHold),
+            13 => Some(Self::TravelRuleStatusChanged),
+            14 => Some(Self::WorkflowCompleted),
+            _ => None,
+        }
+    }
+    
 }
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
@@ -145,10 +163,6 @@ pub enum SumsubReviewRejectStatus {
     Retry = 1,
 }
 impl SumsubReviewRejectStatus {
-    /// String value of the enum field names used in the ProtoBuf definition.
-    ///
-    /// The values are not transformed in any way and thus are considered stable
-    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
     pub fn as_str_name(&self) -> &'static str {
         match self {
             SumsubReviewRejectStatus::Final => "Final",
@@ -163,6 +177,14 @@ impl SumsubReviewRejectStatus {
             _ => None,
         }
     }
+
+    pub fn from_i32(value: i32) -> ::core::option::Option<Self> {
+        match value {
+            0 => Some(Self::Final),
+            1 => Some(Self::Retry),
+            _ => None,
+        }
+    }
 }
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
@@ -171,10 +193,6 @@ pub enum SumsubProofType {
     ProofOfIdentity = 1,
 }
 impl SumsubProofType {
-    /// String value of the enum field names used in the ProtoBuf definition.
-    ///
-    /// The values are not transformed in any way and thus are considered stable
-    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
     pub fn as_str_name(&self) -> &'static str {
         match self {
             SumsubProofType::ProofOfAddress => "ProofOfAddress",
@@ -189,7 +207,16 @@ impl SumsubProofType {
             _ => None,
         }
     }
+
+    pub fn from_i32(value: i32) -> ::core::option::Option<Self> {
+        match value {
+            0 => Some(Self::ProofOfAddress),
+            1 => Some(Self::ProofOfIdentity),
+            _ => None,
+        }
+    }
 }
+
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
 pub enum SumsubReviewStatus {
@@ -201,10 +228,6 @@ pub enum SumsubReviewStatus {
     OnHold = 5,
 }
 impl SumsubReviewStatus {
-    /// String value of the enum field names used in the ProtoBuf definition.
-    ///
-    /// The values are not transformed in any way and thus are considered stable
-    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
     pub fn as_str_name(&self) -> &'static str {
         match self {
             SumsubReviewStatus::Init => "Init",
@@ -224,6 +247,18 @@ impl SumsubReviewStatus {
             "Queued" => Some(Self::Queued),
             "Completed" => Some(Self::Completed),
             "OnHold" => Some(Self::OnHold),
+            _ => None,
+        }
+    }
+
+    pub fn from_i32(value: i32) -> ::core::option::Option<Self> {
+        match value {
+            0 => Some(Self::Init),
+            1 => Some(Self::Pending),
+            2 => Some(Self::Prechecked),
+            3 => Some(Self::Queued),
+            4 => Some(Self::Completed),
+            5 => Some(Self::OnHold),
             _ => None,
         }
     }
