@@ -27,4 +27,5 @@ pub enum ClientKycUpdateStatus{
     ProofOfAddressSuccess = 3,
     ProofOfAddressRetry = 4,
     ProofOfAddressFailed = 5,
+    KycRequiredStatusSet = 6,
 }
