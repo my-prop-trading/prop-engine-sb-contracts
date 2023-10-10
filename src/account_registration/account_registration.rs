@@ -13,4 +13,7 @@ pub struct RegisteredSbModel {
 
     #[prost(string, tag = "2")]
     pub brand_id: String,
+
+    #[prost(string, tag = "3")]
+    pub code: String,
 }
