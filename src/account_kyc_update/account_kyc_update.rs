@@ -1,5 +1,6 @@
+service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[derive(Clone, PartialEq, ::prost::Message)]
-#[my_service_bus_macros::my_sb_entity_protobuf_model(topic_id = "account-kyc-update")]
+#[my_sb_entity_protobuf_model(topic_id = "account-kyc-update")]
 pub struct AccountKycUpdateSbModel {
     #[prost(message, tag = "1")]
     pub event: Option<AccountKycUpdateBodySbModel>,

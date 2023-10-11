@@ -1,8 +1,9 @@
 use crate::common::TradingPlatform; 
 use crate::common::Broker;
 
+service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[derive(Clone, PartialEq, ::prost::Message)]
-#[my_service_bus_macros::my_sb_entity_protobuf_model(topic_id = "metatrader-account-open-position")]
+#[my_sb_entity_protobuf_model(topic_id = "metatrader-account-open-position")]
 pub struct MetatraderAccountOpenPositionSbModel {
     #[prost(message, tag = "1")]
     pub event: Option<MetatraderAccountOpenPositionBodySbModel>,
