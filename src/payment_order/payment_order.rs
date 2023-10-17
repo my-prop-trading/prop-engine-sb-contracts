@@ -10,4 +10,15 @@ pub struct PaymentOrderSbModel {
 pub struct PaymentOrderBodySbModel {
     #[prost(string, tag = "1")]
     pub order_id: String,
+
+    #[prost(enumeration="PaymentOrderStatus", tag = "2")]
+    pub status: i32,
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum PaymentOrderStatus {
+    Success = 0,
+    Failed = 1,
+    Canceled = 2,
 }
