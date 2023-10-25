@@ -40,6 +40,9 @@ pub struct TraderAccountStatusUpdateBodySbModel {
 
     #[prost(int64, tag = "10")]
     pub e_tag: i64,
+
+    #[prost(enumeration="TraderAccountType", tag = "11")]
+    pub account_type: i32,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
@@ -50,4 +53,11 @@ pub enum TraderAccountStatus {
     Disabled = 2,
     StageCompleted = 3,
     Blocked = 4,
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum TraderAccountType {
+    Demo = 0,
+    Live = 1,
 }
