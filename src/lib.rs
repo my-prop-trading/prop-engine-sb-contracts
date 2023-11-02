@@ -78,3 +78,9 @@ mod client_kyc_update;
 
 #[cfg(feature = "client-kyc-update")]
 pub use client_kyc_update::*;
+
+#[cfg(feature = "trader-account-blocked")]
+mod trader_account_blocked;
+
+#[cfg(feature = "trader-account-blocked")]
+pub use trader_account_blocked::*;
