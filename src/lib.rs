@@ -90,3 +90,9 @@ mod payout_status_update;
 
 #[cfg(feature = "payout-status-update")]
 pub use payout_status_update::*;
+
+#[cfg(feature = "profit-release-update")]
+mod profit_release_update;
+
+#[cfg(feature = "profit-release-update")]
+pub use profit_release_update::*;
