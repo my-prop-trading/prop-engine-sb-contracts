@@ -1,6 +1,3 @@
-use crate::common::TradingPlatform; 
-use crate::common::Broker;
-
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[derive(Clone, PartialEq, ::prost::Message)]
 #[my_sb_entity_protobuf_model(topic_id = "trader-account-blocked")]

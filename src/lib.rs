@@ -96,3 +96,9 @@ mod profit_release_update;
 
 #[cfg(feature = "profit-release-update")]
 pub use profit_release_update::*;
+
+#[cfg(feature = "personal-data-update")]
+mod personal_data_update;
+
+#[cfg(feature = "personal-data-update")]
+pub use personal_data_update::*;

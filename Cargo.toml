@@ -5,7 +5,28 @@ edition = "2021"
 
 [features]
 
-default = [
+default = []
+
+#use it to check that this crate is correct
+all = [
+    "account-registration",
+    "payment-order",
+    "trader-account-creation",
+    "trader-account-blocked",
+    "trader-account-status-update",
+    "account-balance-update",
+    "trading-scenario-update",
+    "metatrader-scenario-update",
+    "account-kyc-update",
+    "metatrader-account-open-position",
+    "metatrader-account-delete",
+    "sumsub-status-update",
+    "metatrader-eod-update",
+    "client-live-account-contract",
+    "client-kyc-update",
+    "payout-status-update",
+    "profit-release-update",
+    "personal-data-update",
 ]
 
 account-registration = []
@@ -25,6 +46,7 @@ client-live-account-contract = []
 client-kyc-update = []
 payout-status-update = []
 profit-release-update = []
+personal-data-update = []
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
