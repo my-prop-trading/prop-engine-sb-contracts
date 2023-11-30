@@ -16,8 +16,6 @@ pub struct ClientKycUpdateBodySbModel {
     pub status: i32,
     #[prost(string, tag = "4")]
     pub brand: String,
-    #[prost(string, tag = "5")]
-    pub trader_account_id: String,
 }
 
 
