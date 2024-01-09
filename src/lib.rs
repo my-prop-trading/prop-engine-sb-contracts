@@ -55,17 +55,17 @@ mod metatrader_account_delete;
 #[cfg(feature = "metatrader-account-delete")]
 pub use metatrader_account_delete::*;
 
-#[cfg(feature = "metatrader-account-close-position")]
-mod metatrader_account_close_position;
+#[cfg(feature = "metatrader-position")]
+mod metatrader_position;
 
-#[cfg(feature = "metatrader-account-close-position")]
-pub use metatrader_account_close_position::*;
+#[cfg(feature = "metatrader-position")]
+pub use metatrader_position::*;
 
-#[cfg(feature = "metatrader-account-update")]
-mod metatrader_account_update;
+#[cfg(feature = "metatrader-account")]
+mod metatrader_account;
 
-#[cfg(feature = "metatrader-account-update")]
-pub use metatrader_account_update::*;
+#[cfg(feature = "metatrader-account")]
+pub use metatrader_account::*;
 
 #[cfg(feature = "sumsub-status-update")]
 mod sumsub_status_update;
