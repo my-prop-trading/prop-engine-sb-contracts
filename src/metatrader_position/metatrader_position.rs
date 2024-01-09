@@ -49,4 +49,7 @@ pub struct MetatraderPositionBodySbModel {
 
     #[prost(enumeration = "PositionEventType", tag = "8")]
     pub event_type: i32,
+
+    #[prost(int32, tag = "9")]
+    pub time: i32,
 }
