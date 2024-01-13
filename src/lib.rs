@@ -67,6 +67,12 @@ mod metatrader_account;
 #[cfg(feature = "metatrader-account")]
 pub use metatrader_account::*;
 
+#[cfg(feature = "metatrader-balance")]
+mod metatrader_balance;
+
+#[cfg(feature = "metatrader-balance")]
+pub use metatrader_balance::*;
+
 #[cfg(feature = "sumsub-status-update")]
 mod sumsub_status_update;
 

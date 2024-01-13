@@ -27,6 +27,9 @@ all = [
     "payout-status-update",
     "profit-release-update",
     "personal-data-update",
+    "metatrader-position",
+    "metatrader-balance",
+    "metatrader-account",
 ]
 
 account-registration = []
@@ -47,7 +50,9 @@ client-kyc-update = []
 payout-status-update = []
 profit-release-update = []
 personal-data-update = []
-
+metatrader-position = []
+metatrader-balance = []
+metatrader-account = []
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
