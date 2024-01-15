@@ -5,11 +5,8 @@ use crate::common::AccountType;
 #[repr(i32)]
 pub enum AccountEventType {
     AccountCreated = 0,
-    AccountDeleted = 1,
-    AccountDisabled = 2,
-    AccountEnabled = 3,
-    AccountTradeDisabled = 4,
-    AccountTradeEnabled = 5,
+    AccountUpdated = 1,
+    AccountDeleted = 2,
 }
 
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
@@ -42,4 +39,10 @@ pub struct MetatraderAccountBodySbModel {
 
     #[prost(enumeration = "AccountEventType", tag = "7")]
     pub event_type: i32,
+
+    #[prost(int32, tag = "8")]
+    pub disabled: i32,
+
+    #[prost(int32, tag = "9")]
+    pub trade_disabled: i32,
 }
