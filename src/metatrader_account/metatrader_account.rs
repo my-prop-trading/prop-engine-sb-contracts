@@ -40,9 +40,9 @@ pub struct MetatraderAccountBodySbModel {
     #[prost(enumeration = "AccountEventType", tag = "7")]
     pub event_type: i32,
 
-    #[prost(int32, tag = "8")]
-    pub disabled: i32,
+    #[prost(bool, tag = "8")]
+    pub disabled: bool,
 
-    #[prost(int32, tag = "9")]
-    pub trade_disabled: i32,
+    #[prost(bool, tag = "9")]
+    pub trade_disabled: bool,
 }
