@@ -1,4 +1,5 @@
 use crate::common::TradingPlatform; 
+use crate::common::AccountType; 
 
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -6,13 +7,6 @@ service_sdk::macros::use_my_sb_entity_protobuf_model!();
 pub struct MetatraderPositionSbModel {
     #[prost(message, tag = "1")]
     pub event: Option<MetatraderPositionBodySbModel>,
-}
-
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
-#[repr(i32)]
-pub enum AccountType {
-    Demo = 0,
-    Live = 1,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

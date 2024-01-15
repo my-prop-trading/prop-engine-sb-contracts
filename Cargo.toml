@@ -18,8 +18,6 @@ all = [
     "trading-scenario-update",
     "metatrader-scenario-update",
     "account-kyc-update",
-    "metatrader-account-open-position",
-    "metatrader-account-delete",
     "sumsub-status-update",
     "metatrader-eod-update",
     "client-live-account-contract",
@@ -41,8 +39,6 @@ account-balance-update = []
 trading-scenario-update = []
 metatrader-scenario-update = []
 account-kyc-update = []
-metatrader-account-open-position = []
-metatrader-account-delete = []
 sumsub-status-update = []
 metatrader-eod-update = []
 client-live-account-contract = []

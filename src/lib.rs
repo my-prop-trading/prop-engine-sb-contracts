@@ -43,18 +43,6 @@ mod account_kyc_update;
 #[cfg(feature = "account-kyc-update")]
 pub use account_kyc_update::*;
 
-#[cfg(feature = "metatrader-account-open-position")]
-mod metatrader_account_open_position;
-
-#[cfg(feature = "metatrader-account-open-position")]
-pub use metatrader_account_open_position::*;
-
-#[cfg(feature = "metatrader-account-delete")]
-mod metatrader_account_delete;
-
-#[cfg(feature = "metatrader-account-delete")]
-pub use metatrader_account_delete::*;
-
 #[cfg(feature = "metatrader-position")]
 mod metatrader_position;
 
