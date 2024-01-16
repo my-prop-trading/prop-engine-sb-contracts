@@ -108,3 +108,10 @@ mod personal_data_update;
 
 #[cfg(feature = "personal-data-update")]
 pub use personal_data_update::*;
+
+
+#[cfg(feature = "woocommerce-order-update")]
+mod woocommerce_order_update;
+
+#[cfg(feature = "woocommerce-order-update")]
+pub use woocommerce_order_update::*;
