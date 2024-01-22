@@ -61,6 +61,12 @@ mod metatrader_balance;
 #[cfg(feature = "metatrader-balance")]
 pub use metatrader_balance::*;
 
+#[cfg(feature = "kyc-webhook-update")]
+mod kyc_webhook_update;
+
+#[cfg(feature = "kyc-webhook-update")]
+pub use kyc_webhook_update::*;
+
 #[cfg(feature = "sumsub-status-update")]
 mod sumsub_status_update;
 

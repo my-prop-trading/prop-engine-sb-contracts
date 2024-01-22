@@ -19,6 +19,7 @@ all = [
     "metatrader-scenario-update",
     "account-kyc-update",
     "sumsub-status-update",
+    "kyc-webhook-update",
     "metatrader-eod-update",
     "client-live-account-contract",
     "client-kyc-update",
@@ -41,6 +42,7 @@ trading-scenario-update = []
 metatrader-scenario-update = []
 account-kyc-update = []
 sumsub-status-update = []
+kyc-webhook-update = []
 metatrader-eod-update = []
 client-live-account-contract = []
 client-kyc-update = []
