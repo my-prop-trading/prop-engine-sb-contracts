@@ -120,22 +120,22 @@ impl KycProofResult {
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
 pub enum KycWebhookProofType {
-    ProofOfAddress = 0,
-    ProofOfIdentity = 1,
+    ProofOfIdentity = 0,
+    ProofOfAddress = 1,
 }
 
 impl KycWebhookProofType {
     pub fn as_str_name(&self) -> &'static str {
         match self {
-            KycWebhookProofType::ProofOfAddress => "ProofOfAddress",
             KycWebhookProofType::ProofOfIdentity => "ProofOfIdentity",
+            KycWebhookProofType::ProofOfAddress => "ProofOfAddress",
         }
     }
 
     pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
         match value {
-            "ProofOfAddress" => Some(Self::ProofOfAddress),
             "ProofOfIdentity" => Some(Self::ProofOfIdentity),
+            "ProofOfAddress" => Some(Self::ProofOfAddress),
             _ => None,
         }
     }
