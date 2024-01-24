@@ -2,7 +2,7 @@ service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[my_sb_entity_protobuf_model(topic_id = "kyc-webhook-update")]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct KycWebhookUpdateSbModel {
+pub struct KycWebhookSbModel {
     #[prost(enumeration = "KycWebhookProofType", tag = "1")]
     pub proof_type: i32,
     #[prost(oneof = "kyc_webhook_sb_model::Response", tags = "2, 3, 4")]
