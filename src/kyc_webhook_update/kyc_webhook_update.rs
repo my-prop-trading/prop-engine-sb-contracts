@@ -14,12 +14,21 @@ pub mod kyc_webhook_sb_model {
     #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum Response {
         #[prost(message, tag = "1")]
-        Updated(super::KycWebhookUpdatedSbModel),
+        Created(super::KycWebhookCreatedSbModel),
         #[prost(message, tag = "2")]
-        Successful(super::KycWebhookSuccessfulSbModel),
+        Updated(super::KycWebhookUpdatedSbModel),
         #[prost(message, tag = "3")]
+        Successful(super::KycWebhookSuccessfulSbModel),
+        #[prost(message, tag = "4")]
         Rejected(super::KycWebhookRejectedSbModel),
     }
+}
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct KycWebhookCreatedSbModel {
+    #[prost(message, optional, tag = "1")]
+    pub body: ::core::option::Option<KycWebhookCreatedBodySbModel>,
 }
 
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -42,6 +51,20 @@ pub struct KycWebhookUpdatedSbModel {
     #[prost(message, optional, tag = "1")]
     pub body: ::core::option::Option<KycWebhookUpdateBodySbModel>,
 }
+
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct KycWebhookCreatedBodySbModel {
+    #[prost(string, tag = "1")]
+    pub client_id: ::prost::alloc::string::String,
+    #[prost(string, tag = "2")]
+    pub verification_id: ::prost::alloc::string::String,
+    #[prost(string, tag = "3")]
+    pub applicant_id: ::prost::alloc::string::String,
+    #[prost(int64, tag = "4")]
+    pub created_at: i64,
+}
+
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
