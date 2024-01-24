@@ -5,7 +5,7 @@ service_sdk::macros::use_my_sb_entity_protobuf_model!();
 pub struct KycWebhookSbModel {
     #[prost(enumeration = "KycWebhookProofType", tag = "1")]
     pub proof_type: i32,
-    #[prost(oneof = "kyc_webhook_sb_model::Response", tags = "2, 3, 4")]
+    #[prost(oneof = "kyc_webhook_sb_model::Response", tags = "2, 3, 4, 5")]
     pub response: ::core::option::Option<kyc_webhook_sb_model::Response>,
 }
 
