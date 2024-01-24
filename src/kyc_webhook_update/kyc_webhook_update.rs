@@ -13,13 +13,13 @@ pub mod kyc_webhook_sb_model {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum Response {
-        #[prost(message, tag = "1")]
-        Created(super::KycWebhookCreatedSbModel),
         #[prost(message, tag = "2")]
-        Updated(super::KycWebhookUpdatedSbModel),
+        Created(super::KycWebhookCreatedSbModel),
         #[prost(message, tag = "3")]
-        Successful(super::KycWebhookSuccessfulSbModel),
+        Updated(super::KycWebhookUpdatedSbModel),
         #[prost(message, tag = "4")]
+        Successful(super::KycWebhookSuccessfulSbModel),
+        #[prost(message, tag = "5")]
         Rejected(super::KycWebhookRejectedSbModel),
     }
 }
