@@ -8,6 +8,9 @@ pub struct WoocommerceOrderUpdateSbModel {
 
     #[prost(enumeration="OrderStatus", tag = "2")]
     pub order_status: i32,
+
+    #[prost(string, tag = "3")]
+    pub payment_url: String,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
