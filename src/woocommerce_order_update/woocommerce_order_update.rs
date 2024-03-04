@@ -11,6 +11,9 @@ pub struct WoocommerceOrderUpdateSbModel {
 
     #[prost(string, tag = "3")]
     pub payment_url: String,
+
+    #[prost(int32, tag = "4")]
+    pub woo_order_id: i32,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
