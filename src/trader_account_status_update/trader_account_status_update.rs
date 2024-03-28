@@ -43,6 +43,9 @@ pub struct TraderAccountStatusUpdateBodySbModel {
 
     #[prost(enumeration="TraderAccountType", tag = "11")]
     pub account_type: i32,
+
+    #[prost(enumeration="TraderPackagePhaseType", tag = "12")]
+    pub phase_type: i32,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
@@ -60,4 +63,13 @@ pub enum TraderAccountStatus {
 pub enum TraderAccountType {
     Demo = 0,
     Live = 1,
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum TraderPackagePhaseType {
+    Phase1 = 0,
+    Phase2 = 1,
+    Phase3 = 2,
+    InstantFunding = 3,
 }
