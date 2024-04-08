@@ -121,3 +121,9 @@ mod woocommerce_order_update;
 
 #[cfg(feature = "woocommerce-order-update")]
 pub use woocommerce_order_update::*;
+
+#[cfg(feature = "payment-order-trader-account-created")]
+mod payment_order_trader_account_created;
+
+#[cfg(feature = "payment-order-trader-account-created")]
+pub use payment_order_trader_account_created::*;
