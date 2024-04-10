@@ -1,6 +1,4 @@
-use crate::common::TradingPlatform; 
-use crate::common::Broker;
-
+use crate::common::AccountType; 
 
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -21,11 +19,11 @@ pub struct MetatraderEndOfDayUpdateBodySbModel {
     #[prost(enumeration="MetatraderEndOfDayEventType", tag = "3")]
     pub event_type: i32,
 
-    #[prost(enumeration = "TradingPlatform", tag = "4")]
-    pub trading_platform_type: i32,
+    #[prost(int32, tag = "4")]
+    pub platform_id: i32,
 
-    #[prost(enumeration = "Broker", tag = "5")]
-    pub broker_type: i32,
+    #[prost(enumeration = "AccountType", tag = "5")]
+    pub account_type: i32,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

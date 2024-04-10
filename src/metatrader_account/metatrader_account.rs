@@ -1,4 +1,3 @@
-use crate::common::TradingPlatform; 
 use crate::common::AccountType; 
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
@@ -25,17 +24,11 @@ pub struct MetatraderAccountBodySbModel {
     #[prost(int64, tag = "2")]
     pub metatrader_login: i64,
 
-    #[prost(enumeration = "TradingPlatform", tag = "3")]
-    pub trading_platform_type: i32,
+    #[prost(int32, tag = "3")]
+    pub platform_id: i32,
 
     #[prost(enumeration = "AccountType", tag = "4")]
     pub account_type: i32,
-
-    #[prost(int32, tag = "5")]
-    pub broker_id: i32,
-
-    #[prost(int32, tag = "6")]
-    pub trading_platform_id: i32,
 
     #[prost(enumeration = "AccountEventType", tag = "7")]
     pub event_type: i32,

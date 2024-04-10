@@ -1,5 +1,4 @@
-use crate::common::TradingPlatform; 
-use crate::common::Broker;
+use crate::common::AccountType; 
 
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -14,11 +13,11 @@ pub struct PayoutStatusUpdateBodySbModel {
     #[prost(string, tag = "1")]
     pub payout_id: String,
 
-    #[prost(enumeration="TradingPlatform", tag = "2")]
-    pub trading_platform_type: i32,
+    #[prost(int32, tag = "2")]
+    pub platform_id: i32,
 
-    #[prost(enumeration="Broker", tag = "3")]
-    pub broker_type: i32,
+    #[prost(enumeration = "AccountType", tag = "3")]
+    pub account_type: i32,
 
     #[prost(enumeration="PayoutStatus", tag = "4")]
     pub status: i32 ,

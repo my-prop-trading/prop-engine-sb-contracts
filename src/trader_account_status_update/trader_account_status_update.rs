@@ -1,5 +1,4 @@
-use crate::common::TradingPlatform; 
-use crate::common::Broker;
+use crate::common::AccountType; 
 
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -14,11 +13,11 @@ pub struct TraderAccountStatusUpdateBodySbModel {
     #[prost(string, tag = "1")]
     pub trader_account_id: String,
 
-    #[prost(enumeration="TradingPlatform", tag = "2")]
-    pub trading_platform_type: i32,
+    #[prost(int32, tag = "2")]
+    pub platform_id: i32,
 
-    #[prost(enumeration="Broker", tag = "3")]
-    pub broker_type: i32,
+    #[prost(enumeration = "AccountType", tag = "3")]
+    pub account_type: i32,
 
     #[prost(enumeration="TraderAccountStatus", tag = "4")]
     pub status: i32 ,
@@ -41,9 +40,6 @@ pub struct TraderAccountStatusUpdateBodySbModel {
     #[prost(int64, tag = "10")]
     pub e_tag: i64,
 
-    #[prost(enumeration="TraderAccountType", tag = "11")]
-    pub account_type: i32,
-
     #[prost(enumeration="TraderPackagePhaseType", tag = "12")]
     pub phase_type: i32,
 }
@@ -56,13 +52,6 @@ pub enum TraderAccountStatus {
     Disabled = 2,
     StageCompleted = 3,
     Blocked = 4,
-}
-
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
-#[repr(i32)]
-pub enum TraderAccountType {
-    Demo = 0,
-    Live = 1,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

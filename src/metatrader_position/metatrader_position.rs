@@ -1,4 +1,3 @@
-use crate::common::TradingPlatform; 
 use crate::common::AccountType; 
 
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
@@ -29,17 +28,11 @@ pub struct MetatraderPositionBodySbModel {
     #[prost(int64, tag = "3")]
     pub position_id: i64,
 
-    #[prost(enumeration = "TradingPlatform", tag = "4")]
-    pub trading_platform_type: i32,
+    #[prost(int32, tag = "4")]
+    pub platform_id: i32,
 
     #[prost(enumeration = "AccountType", tag = "5")]
     pub account_type: i32,
-
-    #[prost(int32, tag = "6")]
-    pub broker_id: i32,
-
-    #[prost(int32, tag = "7")]
-    pub trading_platform_id: i32,
 
     #[prost(enumeration = "PositionEventType", tag = "8")]
     pub event_type: i32,
