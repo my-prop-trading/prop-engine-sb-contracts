@@ -22,7 +22,7 @@ pub struct MetatraderAccountBodySbModel {
     pub trader_account_id: String,
 
     #[prost(int64, tag = "2")]
-    pub metatrader_login: i64,
+    pub platform_account_id: String,
 
     #[prost(int32, tag = "3")]
     pub platform_id: i32,
