@@ -22,10 +22,10 @@ pub struct MetatraderPositionBodySbModel {
     #[prost(string, tag = "1")]
     pub trader_account_id: String,
 
-    #[prost(int64, tag = "2")]
+    #[prost(string, tag = "2")]
     pub platform_account_id: String,
 
-    #[prost(int64, tag = "3")]
+    #[prost(string, tag = "3")]
     pub position_id: String,
 
     #[prost(int32, tag = "4")]
