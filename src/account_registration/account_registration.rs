@@ -16,4 +16,8 @@ pub struct RegisteredSbModel {
 
     #[prost(string, tag = "3")]
     pub code: String,
+
+    #[prost(string, tag = "4")]
+    pub tmp_password: String,
 }
+
