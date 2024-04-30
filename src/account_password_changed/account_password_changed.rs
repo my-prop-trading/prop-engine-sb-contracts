@@ -16,8 +16,5 @@ pub struct PasswordChangedSbModel {
 
     #[prost(string, tag = "3")]
     pub new_password: String,
-
-    #[prost(string, tag = "4")]
-    pub client_id: String,
 }
 
