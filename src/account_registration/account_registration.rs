@@ -19,8 +19,5 @@ pub struct RegisteredSbModel {
 
     #[prost(string, tag = "4")]
     pub tmp_password: String,
-
-    #[prost(string, tag = "5")]
-    pub client_id: String,
 }
 
