@@ -127,3 +127,9 @@ mod payment_order_trader_account_created;
 
 #[cfg(feature = "payment-order-trader-account-created")]
 pub use payment_order_trader_account_created::*;
+
+#[cfg(feature = "account-password-changed")]
+mod account_password_changed;
+
+#[cfg(feature = "account-password-changed")]
+pub use account_password_changed::*;
