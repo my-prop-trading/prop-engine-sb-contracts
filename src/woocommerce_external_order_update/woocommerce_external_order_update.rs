@@ -46,8 +46,8 @@ pub struct WoocommerceExternalOrderUpdateSbModel {
     #[prost(int64, tag = "15")]
     pub date_created: i64,
 
-    #[prost(string, tag = "16")]
-    pub discount_total: String,
+    #[prost(double, tag = "16")]
+    pub discount_total: f64,
 
     #[prost(int64, optional, tag = "17")]
     pub date_paid: Option<i64>,
