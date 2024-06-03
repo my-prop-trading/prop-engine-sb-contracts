@@ -43,8 +43,8 @@ pub struct WoocommerceExternalOrderUpdateSbModel {
     #[prost(string, tag = "14")]
     pub phone: String,
 
-    #[prost(string, tag = "15")]
-    pub date_created: String,
+    #[prost(int64, tag = "15")]
+    pub date_created: i64,
 
     #[prost(string, tag = "16")]
     pub discount_total: String,
