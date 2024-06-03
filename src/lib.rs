@@ -133,3 +133,9 @@ mod account_password_changed;
 
 #[cfg(feature = "account-password-changed")]
 pub use account_password_changed::*;
+
+#[cfg(feature = "woocommerce-external-order-update")]
+mod woocommerce_external_order_update;
+
+#[cfg(feature = "woocommerce-external-order-update")]
+pub use woocommerce_external_order_update::*;
