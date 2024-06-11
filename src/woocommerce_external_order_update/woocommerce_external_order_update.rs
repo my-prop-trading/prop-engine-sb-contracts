@@ -66,4 +66,7 @@ pub struct WoocommerceExternalOrderUpdateSbModel {
 
     #[prost(int64, tag = "22")]
     pub date_of_birth: i64,
+
+    #[prost(int32, tag = "23")]
+    pub platform_id: i32,
 }
