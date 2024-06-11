@@ -60,4 +60,10 @@ pub struct WoocommerceExternalOrderUpdateSbModel {
 
     #[prost(string, tag = "20")]
     pub trader_package_id: String,
+
+    #[prost(string, tag = "21")]
+    pub discount_code: String,
+
+    #[prost(int64, tag = "22")]
+    pub date_of_birth: i64,
 }
