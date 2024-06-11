@@ -69,4 +69,17 @@ pub struct WoocommerceExternalOrderUpdateSbModel {
 
     #[prost(int32, tag = "23")]
     pub platform_id: i32,
+
+    #[prost(enumeration="DiscountType", tag = "24")]
+    pub discount_type: i32,
+
+    #[prost(double, tag = "25")]
+    pub discount_nominal_amount: f64,
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum DiscountType {
+    Fixed = 0,    
+    Percent = 1,
 }
