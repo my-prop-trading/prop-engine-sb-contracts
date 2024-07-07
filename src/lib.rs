@@ -139,3 +139,10 @@ mod woocommerce_external_order_update;
 
 #[cfg(feature = "woocommerce-external-order-update")]
 pub use woocommerce_external_order_update::*;
+
+
+#[cfg(feature = "news-violations-restrictions")]
+mod news_violations_restrictions;
+
+#[cfg(feature = "news-violations-restrictions")]
+pub use news_violations_restrictions::*;

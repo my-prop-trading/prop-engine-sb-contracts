@@ -32,7 +32,8 @@ all = [
     "woocommerce-order-update",
     "payment-order-trader-account-created",
     "account-password-changed",
-    "woocommerce-external-order-update"
+    "woocommerce-external-order-update",
+    "news-violations-restrictions"
 ]
 
 account-registration = []
@@ -59,6 +60,7 @@ woocommerce-order-update = []
 payment-order-trader-account-created = []
 account-password-changed = []
 woocommerce-external-order-update = []
+news-violations-restrictions = []
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
