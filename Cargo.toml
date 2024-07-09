@@ -1,6 +1,6 @@
 [package]
 name = "prop-engine-sb-contracts"
-version = "0.4.0"
+version = "0.5.0"
 edition = "2021"
 
 [features]
@@ -65,10 +65,10 @@ news-violations-restrictions = []
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-service-sdk = { tag = "0.2.5", git = "https://github.com/MyJetTools/service-sdk.git", features = [
+service-sdk = { tag = "0.2.6", git = "https://github.com/MyJetTools/service-sdk.git", features = [
     "my-service-bus",
     "macros",
 ] }
 
-prost = "0.12.0"
-prost-types = "0.12.0"
+prost = "*"
+prost-types = "*"
