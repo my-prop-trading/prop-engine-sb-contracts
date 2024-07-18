@@ -13,6 +13,12 @@ pub struct PaymentOrderBodySbModel {
 
     #[prost(enumeration="PaymentOrderStatus", tag = "2")]
     pub status: i32,
+
+    #[prost(string, tag = "3")]
+    pub client_id: String,
+
+    #[prost(double, tag = "4")]
+    pub amount: f64,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
