@@ -75,6 +75,9 @@ pub struct WoocommerceExternalOrderUpdateSbModel {
 
     #[prost(double, tag = "25")]
     pub discount_nominal_amount: f64,
+
+    #[prost(string, optional, tag = "26")]
+    pub click_id: Option<String>,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
