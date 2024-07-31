@@ -146,3 +146,10 @@ mod news_violations_restrictions;
 
 #[cfg(feature = "news-violations-restrictions")]
 pub use news_violations_restrictions::*;
+
+#[cfg(feature = "manual-trader-account-creation")]
+pub mod manual_trader_account_creation;
+
+#[cfg(feature = "manual-trader-account-creation")]
+pub use manual_trader_account_creation::*;
+
