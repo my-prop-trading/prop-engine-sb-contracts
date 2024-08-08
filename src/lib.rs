@@ -153,3 +153,8 @@ pub mod manual_trader_account_creation;
 #[cfg(feature = "manual-trader-account-creation")]
 pub use manual_trader_account_creation::*;
 
+#[cfg(feature = "acqufy-order-click")]
+pub use acqufy_order_click::*;
+
+#[cfg(feature = "acqufy-order-click")]
+mod acqufy_order_click;
