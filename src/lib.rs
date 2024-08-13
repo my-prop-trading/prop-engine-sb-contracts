@@ -158,3 +158,9 @@ pub use acqufy_order_click::*;
 
 #[cfg(feature = "acqufy-order-click")]
 mod acqufy_order_click;
+
+#[cfg(feature = "acqufy-client-click")]
+pub use acqufy_client_click::*;
+
+#[cfg(feature = "acqufy-client-click")]
+mod acqufy_client_click;

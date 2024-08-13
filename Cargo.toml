@@ -36,6 +36,7 @@ all = [
     "news-violations-restrictions",
     "manual-trader-account-creation",
     "acqufy-order-click",
+    "acqufy-client-click",
 ]
 
 account-registration = []
@@ -65,7 +66,7 @@ woocommerce-external-order-update = []
 news-violations-restrictions = []
 manual-trader-account-creation = []
 acqufy-order-click = []
-
+acqufy-client-click = []
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
