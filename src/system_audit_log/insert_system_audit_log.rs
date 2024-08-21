@@ -13,8 +13,8 @@ pub struct InsertSystemAuditLogSbModel {
     pub timestamp: i64,
     #[prost(string, tag = "5")]
     pub ref_id: String,
-    #[prost(string, tag = "6")]
+    #[prost(string, optional, tag = "6")]
     pub snapshot_before: Option<String>,
-    #[prost(string, tag = "7")]
+    #[prost(string, optional, tag = "7")]
     pub snapshot_after: Option<String>,
 }
