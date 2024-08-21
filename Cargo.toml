@@ -37,6 +37,7 @@ all = [
     "manual-trader-account-creation",
     "acqufy-order-click",
     "acqufy-client-click",
+    "system-audit-log",
 ]
 
 account-registration = []
@@ -67,6 +68,8 @@ news-violations-restrictions = []
 manual-trader-account-creation = []
 acqufy-order-click = []
 acqufy-client-click = []
+system-audit-log = []
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
