@@ -1,7 +1,7 @@
 use service_sdk::my_service_bus::macros::my_sb_entity_protobuf_model;
 
 #[derive(Clone, PartialEq, ::prost::Message)]
-#[my_sb_entity_protobuf_model(topic_id = "insert-audit-log-command")]
+#[my_sb_entity_protobuf_model(topic_id = "insert-system-audit-log-command")]
 pub struct InsertSystemAuditLogSbModel {
     #[prost(string, tag = "1")]
     pub label: String,
