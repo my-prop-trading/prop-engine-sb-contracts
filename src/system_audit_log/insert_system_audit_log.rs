@@ -12,7 +12,9 @@ pub struct InsertSystemAuditLogSbModel {
     #[prost(string, tag = "4")]
     pub timestamp: i64,
     #[prost(string, tag = "5")]
-    pub object_id: String,
+    pub ref_id: String,
     #[prost(string, tag = "6")]
-    pub object_json: String,
+    pub snapshot_before_update: String,
+    #[prost(string, tag = "7")]
+    pub snapshot_after_update: Option<String>,
 }
