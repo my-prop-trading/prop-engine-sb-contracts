@@ -1,8 +1,8 @@
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
 
 #[derive(Clone, PartialEq, ::prost::Message)]
-#[my_sb_entity_protobuf_model(topic_id = "insert-system-audit-log-command")]
-pub struct InsertSystemAuditLogSbModel {
+#[my_sb_entity_protobuf_model(topic_id = "insert-system-audit-log-cmd")]
+pub struct InsertSystemAuditLogCmdSbModel {
     #[prost(string, tag = "1")]
     pub label: String,
     #[prost(string, tag = "2")]

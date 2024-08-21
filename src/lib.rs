@@ -166,4 +166,7 @@ pub use acqufy_client_click::*;
 mod acqufy_client_click;
 
 #[cfg(feature = "system-audit-log")]
-pub mod system_audit_log;
+mod system_audit_log;
+
+#[cfg(feature = "system-audit-log")]
+pub use  system_audit_log::*;
