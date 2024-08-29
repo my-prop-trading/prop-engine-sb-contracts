@@ -13,4 +13,7 @@ pub struct PaymentOrderTraderAccountCreatedBodySbModel {
 
     #[prost(string, tag = "2")]
     pub aggregated_id: String,
+
+    #[prost(string, tag = "3")]
+    pub client_id: String,
 }
