@@ -170,3 +170,9 @@ mod system_audit_log;
 
 #[cfg(feature = "system-audit-log")]
 pub use  system_audit_log::*;
+
+#[cfg(feature = "trader-account-reactivated")]
+mod trader_account_reactivated;
+
+#[cfg(feature = "trader-account-reactivated")]
+pub use trader_account_reactivated::*;
