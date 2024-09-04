@@ -30,4 +30,7 @@ pub struct TraderAccountBalanceCorrectionBodySbModel {
 
     #[prost(string, tag = "7")]
     pub currency: String,
+
+    #[prost(string, tag = "8")]
+    pub platform_operation_id: String,
 }
