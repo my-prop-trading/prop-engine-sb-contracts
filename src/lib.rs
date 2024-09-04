@@ -176,3 +176,9 @@ mod trader_account_reactivated;
 
 #[cfg(feature = "trader-account-reactivated")]
 pub use trader_account_reactivated::*;
+
+#[cfg(feature = "trader-account-balance-correction")]
+mod trader_account_balance_correction;
+
+#[cfg(feature = "trader-account-balance-correction")]
+pub use trader_account_balance_correction::*;
