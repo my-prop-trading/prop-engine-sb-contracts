@@ -1,10 +1,10 @@
-use crate::common::AccountType; 
-
+use crate::common::AccountType;
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
+
 #[derive(Clone, PartialEq, ::prost::Message)]
 #[my_sb_entity_protobuf_model(topic_id = "trader-account-balance-correction")]
 pub struct TraderAccountBalanceCorrectionSbModel {
-    #[prost(message, tag = "1")]
+    #[prost(message, optional, tag = "1")]
     pub event: Option<TraderAccountBalanceCorrectionBodySbModel>,
 }
 
