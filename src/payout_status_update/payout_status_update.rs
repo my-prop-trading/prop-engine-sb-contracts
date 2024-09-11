@@ -36,6 +36,9 @@ pub struct PayoutStatusUpdateBodySbModel {
     
     #[prost(string, tag = "9")]
     pub withdrawal_currency: String,
+
+    #[prost(int64, tag = "10")]
+    pub created_at: i64,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
