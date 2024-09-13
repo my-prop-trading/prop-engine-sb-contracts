@@ -13,7 +13,7 @@ pub struct TraderAccountDepositSbModel {
     #[prost(string, tag = "4")]
     pub platform_account_id: String,
     #[prost(string, tag = "5")]
-    pub balance_correction_id: String,
+    pub id: String,
     #[prost(double, tag = "6")]
     pub amount: f64,
     #[prost(string, tag = "7")]
