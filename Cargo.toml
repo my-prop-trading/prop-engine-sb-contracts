@@ -40,6 +40,8 @@ all = [
     "system-audit-log",
     "trader-account-reactivated",
     "trader-account-balance-correction",
+    "trader-account-deposit",
+    "trader-account-withrawal",
 ]
 
 account-registration = []
@@ -73,6 +75,8 @@ acqufy-client-click = []
 system-audit-log = []
 trader-account-reactivated=[]
 trader-account-balance-correction=[]
+trader-account-deposit=[]
+trader-account-withrawal=[]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
