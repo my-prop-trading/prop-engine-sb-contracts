@@ -41,7 +41,7 @@ all = [
     "trader-account-reactivated",
     "trader-account-balance-correction",
     "trading-platform-deposit",
-    "trading-platform-withrawal",
+    "trading-platform-withdrawal",
 ]
 
 account-registration = []
@@ -76,7 +76,7 @@ system-audit-log = []
 trader-account-reactivated=[]
 trader-account-balance-correction=[]
 trading-platform-deposit=[]
-trading-platform-withrawal=[]
+trading-platform-withdrawal=[]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
