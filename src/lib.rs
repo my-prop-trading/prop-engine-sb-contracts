@@ -183,14 +183,14 @@ mod trader_account_balance_correction;
 #[cfg(feature = "trader-account-balance-correction")]
 pub use trader_account_balance_correction::*;
 
-#[cfg(feature = "trader-account-deposit")]
-mod trader_account_deposit;
+#[cfg(feature = "trading-platform-deposit")]
+mod trading_platform_deposit;
 
-#[cfg(feature = "trader-account-deposit")]
-pub use trader_account_deposit::*;
+#[cfg(feature = "trading-platform-deposit")]
+pub use trading_platform_deposit::*;
 
-#[cfg(feature = "trader-account-withrawal")]
-mod trader_account_withrawal;
+#[cfg(feature = "trading-platform-withdrawal")]
+mod trading_platform_withdrawal;
 
-#[cfg(feature = "trader-account-withrawal")]
-pub use trader_account_withrawal::*;
+#[cfg(feature = "trading-platform-withdrawal")]
+pub use trading_platform_withdrawal::*;

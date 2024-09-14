@@ -2,8 +2,8 @@ use crate::common::AccountType;
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
 
 #[derive(Clone, PartialEq, ::prost::Message)]
-#[my_sb_entity_protobuf_model(topic_id = "trader-account-withdrawal")]
-pub struct TraderAccountWithdrawalSbModel {
+#[my_sb_entity_protobuf_model(topic_id = "trading-platform-withdrawal")]
+pub struct TradingPlatformWithdrawalSbModel {
     #[prost(string, tag = "1")]
     pub trader_account_id: String,
     #[prost(int32, tag = "2")]
