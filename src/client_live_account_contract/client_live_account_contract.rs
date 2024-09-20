@@ -37,3 +37,22 @@ pub enum ClientLiveAccountContractStatus{
     SendServiceDeniedDueToViolationTermsAndCondOnContractSigning= 9,
     SendServiceDeniedOnAllAccountsDueToViolationTermsAndCond = 10,
 }
+
+
+impl ClientLiveAccountContractStatus {
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            ClientLiveAccountContractStatus::Created => "Created",
+            ClientLiveAccountContractStatus::SentToClient => "SentToClient",
+            ClientLiveAccountContractStatus::SignedByClientAndReceived => "SignedByClientAndReceived",
+            ClientLiveAccountContractStatus::GrantedLiveAccount => "GrantedLiveAccount",
+            ClientLiveAccountContractStatus::Rejected => "Rejected",
+            ClientLiveAccountContractStatus::RejectedAndBlocked => "RejectedAndBlocked",
+            ClientLiveAccountContractStatus::Uploaded => "Uploaded",
+            ClientLiveAccountContractStatus::Downloaded => "Downloaded",
+            ClientLiveAccountContractStatus::SendContractToClient => "SendContractToClient",
+            ClientLiveAccountContractStatus::SendServiceDeniedDueToViolationTermsAndCondOnContractSigning => "SendServiceDeniedDueToViolationTermsAndCondOnContractSigning",
+            ClientLiveAccountContractStatus::SendServiceDeniedOnAllAccountsDueToViolationTermsAndCond => "SendServiceDeniedOnAllAccountsDueToViolationTermsAndCond",
+        }
+    }
+}
