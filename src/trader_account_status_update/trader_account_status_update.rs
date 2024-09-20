@@ -54,6 +54,18 @@ pub enum TraderAccountStatus {
     Blocked = 4,
 }
 
+impl TraderAccountStatus {
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            TraderAccountStatus::New => "New",
+            TraderAccountStatus::Active => "Active",
+            TraderAccountStatus::Disabled => "Disabled",
+            TraderAccountStatus::StageCompleted => "StageCompleted",
+            TraderAccountStatus::Blocked => "Blocked",
+        }
+    }
+}
+
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
 pub enum TraderPackagePhaseType {
@@ -61,4 +73,15 @@ pub enum TraderPackagePhaseType {
     Phase2 = 1,
     Phase3 = 2,
     InstantFunding = 3,
+}
+
+impl TraderPackagePhaseType {
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            TraderPackagePhaseType::Phase1 => "Phase1",
+            TraderPackagePhaseType::Phase2 => "Phase2",
+            TraderPackagePhaseType::Phase3 => "Phase3",
+            TraderPackagePhaseType::InstantFunding => "InstantFunding",
+        }
+    }
 }
