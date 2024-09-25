@@ -33,3 +33,18 @@ pub enum OrderStatus {
     Failed = 6,
     Trash = 7,
 }
+
+impl OrderStatus {
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            OrderStatus::Pending => "Pending",
+            OrderStatus::Processing => "Processing",
+            OrderStatus::OnHold => "OnHold",
+            OrderStatus::Completed => "Completed",
+            OrderStatus::Cancelled => "Cancelled",
+            OrderStatus::Refunded => "Refunded",
+            OrderStatus::Failed => "Failed",
+            OrderStatus::Trash => "Trash",
+        }
+    }
+}

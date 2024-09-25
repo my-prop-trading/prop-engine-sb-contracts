@@ -28,3 +28,13 @@ pub enum PaymentOrderStatus {
     Failed = 1,
     Canceled = 2,
 }
+
+impl PaymentOrderStatus {
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            PaymentOrderStatus::Success => "Success",
+            PaymentOrderStatus::Failed => "Failed",
+            PaymentOrderStatus::Canceled => "Canceled",
+        }
+    }
+}
