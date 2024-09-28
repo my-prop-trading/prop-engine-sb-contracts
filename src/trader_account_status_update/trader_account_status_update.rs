@@ -52,8 +52,6 @@ pub enum TraderAccountStatus {
     Disabled = 2,
     StageCompleted = 3,
     Blocked = 4,
-    //TRADING_SUSPENDED
-    TradingSuspended = 5,
 }
 
 impl TraderAccountStatus {
@@ -64,7 +62,6 @@ impl TraderAccountStatus {
             TraderAccountStatus::Disabled => "Disabled",
             TraderAccountStatus::StageCompleted => "StageCompleted",
             TraderAccountStatus::Blocked => "Blocked",
-            TraderAccountStatus::TradingSuspended => "TradingSuspended",
         }
     }
 }
