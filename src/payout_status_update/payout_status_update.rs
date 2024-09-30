@@ -43,8 +43,8 @@ pub struct PayoutStatusUpdateBodySbModel {
     #[prost(double, tag = "11")]
     pub revenue_share: f64,
 
-    #[prost(enumeration="PayoutType", tag = "11")]
-    pub payout_type: PayoutType,
+    #[prost(enumeration="PayoutType", tag = "12")]
+    pub payout_type: i32,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
