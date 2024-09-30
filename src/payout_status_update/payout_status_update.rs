@@ -42,6 +42,9 @@ pub struct PayoutStatusUpdateBodySbModel {
 
     #[prost(double, tag = "11")]
     pub revenue_share: f64,
+
+    #[prost(enumeration="PayoutType", tag = "11")]
+    pub payout_type: PayoutType,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
@@ -50,4 +53,12 @@ pub enum PayoutStatus {
     Pending = 0,
     Success = 1,
     Fail = 2,
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum PayoutType {
+    RevenueShare = 0,
+    Withdrawal = 1,
+    ExcessiveProfit = 2,
 }
