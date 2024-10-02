@@ -15,5 +15,8 @@ pub struct WoocommerceOrderUpdateSbModel {
 
     #[prost(int32, tag = "4")]
     pub woo_order_id: i32,
+
+    #[prost(string, tag = "5")]
+    pub payment_method_title: String,
 }
 
