@@ -53,6 +53,7 @@ pub enum PayoutStatus {
     Pending = 0,
     Success = 1,
     Fail = 2,
+    Approved = 3,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
