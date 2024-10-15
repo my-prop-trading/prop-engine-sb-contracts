@@ -29,3 +29,14 @@ pub enum BlockType {
     BlockTradesAndFuture = 2,
     BlockTradesAndFutureAndCurrent = 4,
 }
+
+impl BlockType {
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            BlockType::Empty => "Empty",
+            BlockType::BlockTrades => "BlockTrades",
+            BlockType::BlockTradesAndFuture => "BlockTradesAndFuture",
+            BlockType::BlockTradesAndFutureAndCurrent => "BlockTradesAndFutureAndCurrent",
+        }
+    }
+}
