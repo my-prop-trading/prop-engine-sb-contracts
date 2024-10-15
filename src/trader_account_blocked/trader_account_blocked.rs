@@ -19,6 +19,9 @@ pub struct TraderAccountBlockedBodySbModel {
 
     #[prost(string, tag = "4")]
     pub client_id: String,
+
+    #[prost(enumeration = "AccountType", tag = "5")]
+    pub account_type: i32,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
