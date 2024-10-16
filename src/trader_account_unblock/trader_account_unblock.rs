@@ -7,7 +7,7 @@ pub struct TraderAccountUnBlockSbModel {
     #[prost(string, tag = "1")]
     pub trader_account_id: String,
 
-    #[prost(enumeration="UnBlockType", tag = "2")]
+    #[prost(enumeration="BlockType", tag = "2")]
     pub block_type: i32,
 
     #[prost(string, tag = "3")]
@@ -22,14 +22,20 @@ pub struct TraderAccountUnBlockSbModel {
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
-pub enum UnBlockType {
-    UnBlockTrades = 1,
+pub enum BlockType {
+    Empty = 0,
+    BlockTrades = 1,
+    BlockTradesAndFuture = 2,
+    BlockTradesAndFutureAndCurrent = 4,
 }
 
-impl UnBlockType {
+impl BlockType {
     pub fn as_str_name(&self) -> &'static str {
         match self {
-            UnBlockType::UnBlockTrades => "UnBlockTrades",
+            BlockType::Empty => "Empty",
+            BlockType::BlockTrades => "BlockTrades",
+            BlockType::BlockTradesAndFuture => "BlockTradesAndFuture",
+            BlockType::BlockTradesAndFutureAndCurrent => "BlockTradesAndFutureAndCurrent",
         }
     }
 }
