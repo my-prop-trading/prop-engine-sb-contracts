@@ -77,7 +77,7 @@ trader-account-reactivated=[]
 trader-account-balance-correction=[]
 trading-platform-deposit=[]
 trading-platform-withdrawal=[]
-trader-account-unblock = []
+trader-account-block-status-update = []
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
