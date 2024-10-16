@@ -2,8 +2,8 @@ use crate::common::AccountType;
 
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[derive(Clone, PartialEq, ::prost::Message)]
-#[my_sb_entity_protobuf_model(topic_id = "trader-account-unblock")]
-pub struct TraderAccountUnBlockSbModel {
+#[my_sb_entity_protobuf_model(topic_id = "trader-account-block-status-update")]
+pub struct TraderAccountBlockStatusUpdateSbModel {
     #[prost(string, tag = "1")]
     pub trader_account_id: String,
 
@@ -18,6 +18,12 @@ pub struct TraderAccountUnBlockSbModel {
 
     #[prost(enumeration = "AccountType", tag = "5")]
     pub account_type: i32,
+
+    #[prost(int32, tag = "6")]
+    pub platform_id: i32,
+
+    #[prost(enumeration = "BlockStatus", tag = "7")]
+    pub block_status: i32,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
@@ -36,6 +42,22 @@ impl BlockType {
             BlockType::BlockTrades => "BlockTrades",
             BlockType::BlockTradesAndFuture => "BlockTradesAndFuture",
             BlockType::BlockTradesAndFutureAndCurrent => "BlockTradesAndFutureAndCurrent",
+        }
+    }
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum BlockStatus {
+    Blocked = 0,
+    Unblocked = 1,
+}
+
+impl BlockStatus {
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            BlockStatus::Blocked => "Blocked",
+            BlockStatus::Unblocked => "Unblocked",
         }
     }
 }
