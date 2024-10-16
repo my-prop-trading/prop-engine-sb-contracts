@@ -97,6 +97,12 @@ mod trader_account_blocked;
 #[cfg(feature = "trader-account-blocked")]
 pub use trader_account_blocked::*;
 
+#[cfg(feature = "trader-account-unblock")]
+mod trader_account_unblock;
+
+#[cfg(feature = "trader-account-unblock")]
+pub use trader_account_unblock::*;
+
 #[cfg(feature = "payout-status-update")]
 mod payout_status_update;
 
