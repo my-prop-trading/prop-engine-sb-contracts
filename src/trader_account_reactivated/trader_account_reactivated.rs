@@ -13,4 +13,13 @@ pub struct TraderAccountReactivatedBodySbModel {
 
     #[prost(string, tag = "2")]
     pub client_id: String,
+
+    #[prost(string, tag = "3")]
+    pub brand: String,
+
+    #[prost(enumeration = "AccountType", tag = "4")]
+    pub account_type: i32,
+
+    #[prost(int32, tag = "5")]
+    pub platform_id: i32,
 }
