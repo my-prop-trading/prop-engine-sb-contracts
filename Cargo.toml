@@ -42,6 +42,7 @@ all = [
     "trader-account-balance-correction",
     "trading-platform-deposit",
     "trading-platform-withdrawal",
+    "trader-account-block-status-update",
 ]
 
 account-registration = []
