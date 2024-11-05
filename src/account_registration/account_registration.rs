@@ -21,3 +21,33 @@ pub struct RegisteredSbModel {
     pub tmp_password: String,
 }
 
+// Sanitized versions for logging
+/// Sanitized version of the RegisteredSbModel
+#[derive(Debug)]
+pub struct SanitizedRegisteredSbModel {
+    pub trader_id: String,
+    pub brand_id: String,
+}
+
+#[derive(Debug)]
+pub struct SanitizedAccountRegisteredSbModel {
+    pub event: Option<SanitizedRegisteredSbModel>,
+}
+
+// Implement methods to create sanitized models
+impl RegisteredSbModel {
+    pub fn to_sanitized(&self) -> SanitizedRegisteredSbModel {
+        SanitizedRegisteredSbModel {
+            trader_id: self.trader_id.clone(),
+            brand_id: self.brand_id.clone(),
+        }
+    }
+}
+
+impl AccountRegisteredSbModel {
+    pub fn to_sanitized(&self) -> SanitizedAccountRegisteredSbModel {
+        SanitizedAccountRegisteredSbModel {
+            event: self.event.as_ref().map(|e| e.to_sanitized()),
+        }
+    }
+}
