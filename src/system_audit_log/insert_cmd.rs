@@ -17,4 +17,6 @@ pub struct InsertSystemAuditLogCmdSbModel {
     pub snapshot_before: Option<String>,
     #[prost(string, optional, tag = "7")]
     pub snapshot_after: Option<String>,
+    #[prost(string, repeated, tag = "8")]
+    pub related_ids: Vec<String>,
 }
