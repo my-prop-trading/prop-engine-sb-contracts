@@ -56,10 +56,50 @@ pub enum PayoutStatus {
     Approved = 3,
 }
 
+impl PayoutStatus {
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            PayoutStatus::Pending => "Pending",
+            PayoutStatus::Success => "Success",
+            PayoutStatus::Fail => "Fail",
+            PayoutStatus::Approved => "Approved",
+        }
+    }
+
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "Pending" => Some(Self::Pending),
+            "Success" => Some(Self::Success),
+            "Fail" => Some(Self::Fail),
+            "Approved" => Some(Self::Approved),
+            _ => None,
+        }
+    }    
+}
+
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
 pub enum PayoutType {
     RevenueShare = 0,
     Withdrawal = 1,
     ExcessiveProfit = 2,
+}
+
+impl PayoutType {
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            PayoutType::RevenueShare => "RevenueShare",
+            PayoutType::Withdrawal => "Withdrawal",
+            PayoutType::ExcessiveProfit => "ExcessiveProfit",
+        }
+    }
+
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "RevenueShare" => Some(Self::RevenueShare),
+            "Withdrawal" => Some(Self::Withdrawal),
+            "ExcessiveProfit" => Some(Self::ExcessiveProfit),
+            _ => None,
+        }
+    }    
 }
