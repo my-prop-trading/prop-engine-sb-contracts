@@ -1,6 +1,6 @@
 [package]
 name = "prop-engine-sb-contracts"
-version = "0.6.0"
+version = "0.7.0"
 edition = "2021"
 
 [features]
@@ -83,7 +83,7 @@ trader-account-block-status-update = []
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-service-sdk = { tag = "0.3.0", git = "https://github.com/MyJetTools/service-sdk.git", features = [
+service-sdk = { tag = "0.4.1", git = "https://github.com/MyJetTools/service-sdk.git", features = [
     "my-service-bus",
     "macros",
 ] }
