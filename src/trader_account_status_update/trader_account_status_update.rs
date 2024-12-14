@@ -42,6 +42,9 @@ pub struct TraderAccountStatusUpdateBodySbModel {
 
     #[prost(enumeration="TraderPackagePhaseType", tag = "12")]
     pub phase_type: i32,
+
+    #[prost(string, tag = "13")]
+    pub order_id: String,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
