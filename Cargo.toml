@@ -37,6 +37,7 @@ all = [
     "manual-trader-account-creation",
     "acqufy-order-click",
     "acqufy-client-click",
+    "acqufy_marketing_tracker",
     "system-audit-log",
     "trader-account-reactivated",
     "trader-account-balance-correction",
@@ -73,6 +74,7 @@ news-violations-restrictions = []
 manual-trader-account-creation = []
 acqufy-order-click = []
 acqufy-client-click = []
+acqufy_marketing_tracker = []
 system-audit-log = []
 trader-account-reactivated=[]
 trader-account-balance-correction=[]

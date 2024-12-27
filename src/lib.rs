@@ -171,6 +171,12 @@ pub use acqufy_client_click::*;
 #[cfg(feature = "acqufy-client-click")]
 mod acqufy_client_click;
 
+#[cfg(feature = "acqufy_marketing_tracker")]
+pub use acqufy_marketing_tracker::*;
+
+#[cfg(feature = "acqufy_marketing_tracker")]
+mod acqufy_marketing_tracker;
+
 #[cfg(feature = "system-audit-log")]
 mod system_audit_log;
 
