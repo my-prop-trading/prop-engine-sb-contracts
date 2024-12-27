@@ -11,6 +11,6 @@ pub struct AcqufyMarketingTrackerSbModel {
     #[prost(string, tag = "3")]
     pub ip: String,
 
-    // #[prost(map, tag = "4")]
-    // pub parameters: std::collections::HashMap<String, String>,
+    #[prost(map = "string, string", tag = "4")]
+    pub parameters: std::collections::HashMap<String, String>,
 }
