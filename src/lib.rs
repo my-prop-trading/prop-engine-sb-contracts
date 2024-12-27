@@ -171,10 +171,10 @@ pub use acqufy_client_click::*;
 #[cfg(feature = "acqufy-client-click")]
 mod acqufy_client_click;
 
-#[cfg(feature = "acqufy_marketing_tracker")]
+#[cfg(feature = "acqufy-marketing-tracker")]
 pub use acqufy_marketing_tracker::*;
 
-#[cfg(feature = "acqufy_marketing_tracker")]
+#[cfg(feature = "acqufy-marketing-tracker")]
 mod acqufy_marketing_tracker;
 
 #[cfg(feature = "system-audit-log")]
