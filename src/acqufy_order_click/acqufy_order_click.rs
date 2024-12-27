@@ -16,5 +16,8 @@ pub struct AcqufyOrderClickBodySbModel {
 
     #[prost(string, tag = "3")]
     pub affiliate_id: String,
+
+    #[prost(string, tag = "4")]
+    pub client_id: String,
 }
 
