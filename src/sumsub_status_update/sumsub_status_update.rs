@@ -1,5 +1,4 @@
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
-#[allow(clippy::derive_partial_eq_without_eq)]
 #[my_sb_entity_protobuf_model(topic_id = "sumsub-status-update")]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SumsubUpdateSbModel {
@@ -14,15 +13,14 @@ pub mod sumsub_update_sb_model {
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum Response {
-        #[prost(message, tag = "1")]
-        Updated(super::UpdatedSbModel),
         #[prost(message, tag = "2")]
-        Successful(super::CompletedSuccessfulSbModel),
+        Updated(super::UpdatedSbModel),
         #[prost(message, tag = "3")]
+        Successful(super::CompletedSuccessfulSbModel),
+        #[prost(message, tag = "4")]
         Rejected(super::CompletedRejectedSbModel),
     }
 }
-#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CompletedRejectedSbModel {
     #[prost(message, optional, tag = "1")]
@@ -30,19 +28,16 @@ pub struct CompletedRejectedSbModel {
     #[prost(enumeration = "SumsubReviewRejectStatus", tag = "2")]
     pub reject_status: i32,
 }
-#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CompletedSuccessfulSbModel {
     #[prost(message, optional, tag = "1")]
     pub body: ::core::option::Option<SumsubUpdateBodySbModel>,
 }
-#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdatedSbModel {
     #[prost(message, optional, tag = "1")]
     pub body: ::core::option::Option<SumsubUpdateBodySbModel>,
 }
-#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SumsubUpdateBodySbModel {
     #[prost(string, tag = "1")]
@@ -58,7 +53,6 @@ pub struct SumsubUpdateBodySbModel {
     #[prost(enumeration = "SumsubReviewStatus", tag = "6")]
     pub review_status: i32,
 }
-#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CompletedStatusSbModel {
     #[prost(oneof = "completed_status_sb_model::Response", tags = "1, 2")]
