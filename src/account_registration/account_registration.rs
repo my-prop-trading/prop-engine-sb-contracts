@@ -19,6 +19,7 @@ pub struct RegisteredSbModel {
 
     #[prost(string, tag = "4")]
     pub tmp_password: String,
+
 }
 
 // Sanitized versions for logging

@@ -16,6 +16,24 @@ pub enum PositionEventType {
     PositionClosed = 2,
 }
 
+impl PositionEventType {
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            PositionEventType::PositionOpened => "PositionOpened",
+            PositionEventType::PositionUpdated => "PositionUpdated",
+            PositionEventType::PositionClosed => "PositionClosed",
+        }
+    }
+
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "PositionOpened" => Some(Self::PositionOpened),
+            "PositionUpdated" => Some(Self::PositionUpdated),
+            "PositionClosed" => Some(Self::PositionClosed),
+            _ => None,
+        }
+    }    
+}
 
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MetatraderPositionBodySbModel {
