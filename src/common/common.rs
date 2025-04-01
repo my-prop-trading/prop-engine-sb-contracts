@@ -48,3 +48,23 @@ impl OrderStatus {
         }
     }
 }
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum TraderAccountPhaseType {
+    Phase1 = 0,
+    Phase2 = 1,
+    Phase3 = 2,
+    InstantFunding = 3,
+}
+
+impl TraderAccountPhaseType {
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            TraderAccountPhaseType::Phase1 => "Phase1",
+            TraderAccountPhaseType::Phase2 => "Phase2",
+            TraderAccountPhaseType::Phase3 => "Phase3",
+            TraderAccountPhaseType::InstantFunding => "InstantFunding",
+        }
+    }
+}
