@@ -1,7 +1,7 @@
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[derive(Clone, PartialEq, ::prost::Message)]
 #[my_sb_entity_protobuf_model(topic_id = "payment-session-received")]
-pub struct PaymentOrderReceivedSbModel {
+pub struct PaymentSessionReceivedSbModel {
     #[prost(string, tag = "1")]
     pub order_id: String,
     #[prost(int32, tag = "2")]
