@@ -27,6 +27,8 @@ pub enum PaymentOrderStatus {
     Success = 0,
     Failed = 1,
     Canceled = 2,
+    Unpaid = 3,
+    Pending = 4,
 }
 
 impl PaymentOrderStatus {
@@ -35,6 +37,8 @@ impl PaymentOrderStatus {
             PaymentOrderStatus::Success => "Success",
             PaymentOrderStatus::Failed => "Failed",
             PaymentOrderStatus::Canceled => "Canceled",
+            PaymentOrderStatus::Unpaid => "Unpaid",
+            PaymentOrderStatus::Pending => "Pending",
         }
     }
 }
