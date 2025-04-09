@@ -45,6 +45,9 @@ pub struct PayoutStatusUpdateBodySbModel {
 
     #[prost(enumeration="PayoutType", tag = "12")]
     pub payout_type: i32,
+
+    #[prost(double, tag = "13")]
+    pub aggregated_withdrawal_amount: f64,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
