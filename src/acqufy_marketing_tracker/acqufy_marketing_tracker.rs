@@ -18,5 +18,5 @@ pub struct AcqufyMarketingTrackerSbModel {
     pub parameters: std::collections::HashMap<String, String>,
 
     #[prost(string, tag = "6")]
-    pub fbclid: String,
+    pub fbclid: Option<String>,
 }
