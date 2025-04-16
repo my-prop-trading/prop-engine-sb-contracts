@@ -25,6 +25,9 @@ pub struct  TradingScenarioBodySbModel {
 
     #[prost(int32, tag = "6")]
     pub days_traded: i32,
+
+    #[prost(string, tag = "7")]
+    pub client_id: String,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
