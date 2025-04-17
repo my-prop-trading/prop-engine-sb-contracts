@@ -210,3 +210,6 @@ pub use trading_platform_withdrawal::*;
 #[cfg(feature = "payment-session")]
 pub mod payment_session;
 
+#[cfg(feature = "trading-started")]
+pub mod trading_started;
+
