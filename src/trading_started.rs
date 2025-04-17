@@ -12,6 +12,6 @@ pub struct TradingStartedSbModel {
     #[prost(int64, tag = "3")]
     pub start_date: i64,
 
-    #[prost(int64, tag = "4")]
+    #[prost(int64, optional, tag = "4")]
     pub end_date: Option<i64>,
 }

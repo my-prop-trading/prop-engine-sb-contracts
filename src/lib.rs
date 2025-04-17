@@ -213,3 +213,6 @@ pub mod payment_session;
 #[cfg(feature = "trading-started")]
 pub mod trading_started;
 
+#[cfg(feature = "client-authenticated")]
+pub mod client_authenticated;
+

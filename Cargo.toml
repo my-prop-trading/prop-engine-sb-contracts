@@ -46,7 +46,8 @@ all = [
     "trader-account-block-status-update",
     "payment-session",
     "payment-session",
-    "trading-started"
+    "trading-started",
+    "client-authenticated",
 ]
 
 account-registration = []
@@ -86,6 +87,7 @@ trading-platform-withdrawal=[]
 trader-account-block-status-update = []
 payment-session = []
 trading-started = []
+client-authenticated = []
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
