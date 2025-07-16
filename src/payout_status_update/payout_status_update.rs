@@ -48,6 +48,9 @@ pub struct PayoutStatusUpdateBodySbModel {
 
     #[prost(double, tag = "13")]
     pub aggregated_withdrawal_amount: f64,
+
+    #[prost(double, tag = "14")]
+    pub refund_fee_amount: f64,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
