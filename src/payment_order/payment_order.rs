@@ -20,7 +20,7 @@ pub struct PaymentOrderBodySbModel {
     #[prost(double, tag = "4")]
     pub amount: f64,
 
-    #[prost(double, tag = "5")]
+    #[prost(string, optional, tag = "5")]
     pub discount_code: Option<String>,
 }
 
