@@ -19,6 +19,9 @@ pub struct PaymentOrderBodySbModel {
 
     #[prost(double, tag = "4")]
     pub amount: f64,
+
+    #[prost(double, tag = "5")]
+    pub discount_code: Option<String>,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
