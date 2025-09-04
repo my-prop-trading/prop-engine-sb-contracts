@@ -11,7 +11,7 @@ pub struct PaymentOrderBodySbModel {
     #[prost(string, tag = "1")]
     pub order_id: String,
 
-    #[prost(enumeration="PaymentOrderStatus", tag = "2")]
+    #[prost(enumeration = "PaymentOrderStatus", tag = "2")]
     pub status: i32,
 
     #[prost(string, tag = "3")]
@@ -23,8 +23,11 @@ pub struct PaymentOrderBodySbModel {
     #[prost(string, optional, tag = "5")]
     pub discount_code: Option<String>,
 
-    #[prost(enumeration="PaymentOrderStatus", optional, tag = "6")]
-    pub prev_status: Option<i32>,
+    #[prost(int32, optional, tag = "6")]
+    pub prev_order_status: Option<i32>,
+
+    #[prost(int32, optional, tag = "7")]
+    pub order_status: Option<i32>,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
