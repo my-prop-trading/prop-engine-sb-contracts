@@ -98,4 +98,3 @@ service-sdk = { tag = "0.4.2", git = "https://github.com/MyJetTools/service-sdk.
 ] }
 
 prost = "*"
-prost-types = "*"
