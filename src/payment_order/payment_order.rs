@@ -22,6 +22,9 @@ pub struct PaymentOrderBodySbModel {
 
     #[prost(string, optional, tag = "5")]
     pub discount_code: Option<String>,
+
+    #[prost(enumeration="PaymentOrderStatus", tag = "6")]
+    pub prev_status: i32,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
