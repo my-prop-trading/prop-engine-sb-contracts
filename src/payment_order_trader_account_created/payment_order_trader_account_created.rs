@@ -31,4 +31,7 @@ pub struct PaymentOrderTraderAccountCreatedBodySbModel {
 
     #[prost(double, tag = "8")]
     pub total_discount: f64,
+
+    #[prost(string, tag = "9")]
+    pub trader_account_id: String,
 }
