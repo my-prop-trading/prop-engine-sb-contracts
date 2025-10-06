@@ -10,4 +10,8 @@ pub struct PaymentOrderReceivedSbModel {
     pub psp_order_id: String,
     #[prost(string, tag = "5")]
     pub psp_name: String,
+    #[prost(string, optional, tag = "6")]
+    pub decline_code: Option<String>,
+    #[prost(string, optional, tag = "7")]
+    pub decline_reason: Option<String>,
 }
