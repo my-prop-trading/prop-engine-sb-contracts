@@ -14,4 +14,8 @@ pub struct PaymentOrderReceivedSbModel {
     pub decline_code: Option<String>,
     #[prost(string, optional, tag = "7")]
     pub decline_reason: Option<String>,
+    #[prost(string, optional, tag = "8")]
+    pub credit_card_token: Option<String>,
+    #[prost(string, optional, tag = "9")]
+    pub card_masked_number: Option<String>,
 }
