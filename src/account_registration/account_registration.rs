@@ -20,6 +20,24 @@ pub struct RegisteredSbModel {
     #[prost(string, tag = "4")]
     pub tmp_password: String,
 
+    #[prost(message, tag = "5")]
+    pub personal_data: Option<PersonalDataSbModel>,
+}
+
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct PersonalDataSbModel {
+    #[prost(string, tag = "1")]
+    pub id: String,
+    #[prost(string, optional, tag = "2")]
+    pub email: Option<String>,
+    #[prost(string, optional, tag = "3")]
+    pub first_name: Option<String>,
+    #[prost(string, optional, tag = "4")]
+    pub last_name: Option<String>,
+    #[prost(string, optional, tag = "5")]
+    pub country_of_registration: Option<String>,
+    #[prost(string, optional, tag = "6")]
+    pub country_of_registration_by_ip: Option<String>,
 }
 
 // Sanitized versions for logging
