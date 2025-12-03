@@ -18,4 +18,6 @@ pub struct PaymentOrderReceivedSbModel {
     pub credit_card_token: Option<String>,
     #[prost(string, optional, tag = "9")]
     pub card_masked_number: Option<String>,
+    #[prost(int32, optional, tag = "10")]
+    pub provider_id: Option<i32>,
 }
