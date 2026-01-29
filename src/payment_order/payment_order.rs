@@ -28,6 +28,9 @@ pub struct PaymentOrderBodySbModel {
 
     #[prost(int32, tag = "7")]
     pub order_status: i32,
+
+    #[prost(int32, tag = "8")]
+    pub decline_reason_type: i32
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
