@@ -1,6 +1,6 @@
 [package]
 name = "prop-engine-sb-contracts"
-version = "0.9.0"
+version = "0.9.1"
 edition = "2021"
 
 [features]
@@ -32,6 +32,7 @@ all = [
     "woocommerce-order-update",
     "payment-order-trader-account-created",
     "account-password-changed",
+    "account-email-changed",
     "woocommerce-external-order-update",
     "news-violations-restrictions",
     "manual-trader-account-creation",
@@ -73,6 +74,7 @@ metatrader-account = []
 woocommerce-order-update = []
 payment-order-trader-account-created = []
 account-password-changed = []
+account-email-changed = []
 woocommerce-external-order-update = []
 news-violations-restrictions = []
 manual-trader-account-creation = []
