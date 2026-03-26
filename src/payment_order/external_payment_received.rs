@@ -2,7 +2,7 @@ service_sdk::macros::use_my_sb_entity_protobuf_model!();
 
 #[derive(Clone, PartialEq, ::prost::Message)]
 #[my_sb_entity_protobuf_model(topic_id = "external-payment-received")]
-pub struct PaymentOrderReceivedSbModel {
+pub struct ExternalPaymentReceivedSbModel {
     #[prost(string, optional, tag = "1")]
     pub email: Option<String>,
     #[prost(string, tag = "2")]
