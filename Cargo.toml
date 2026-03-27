@@ -48,6 +48,7 @@ all = [
     "payment-session",
     "trading-started",
     "client-authenticated",
+    "rise-status-update"
 ]
 
 account-registration = []
