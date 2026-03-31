@@ -222,3 +222,6 @@ pub mod trading_started;
 #[cfg(feature = "client-authenticated")]
 pub mod client_authenticated;
 
+#[cfg(feature = "rise-status-update")]
+pub mod rise_status_update;
+

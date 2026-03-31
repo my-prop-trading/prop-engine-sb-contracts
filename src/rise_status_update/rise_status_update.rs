@@ -1,6 +1,6 @@
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[derive(Clone, PartialEq, ::prost::Message)]
-#[my_sb_entity_protobuf_model(topic_id = "account-email-changed")]
+#[my_sb_entity_protobuf_model(topic_id = "rise-status-updated")]
 pub struct RiseStatusUpdatedSbModel {
     #[prost(message, tag = "1")]
     pub event: Option<AccountEmailChangedSbModel>,
