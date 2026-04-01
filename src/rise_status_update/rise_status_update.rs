@@ -18,6 +18,8 @@ pub struct RiseStatusUpdatedEventSbModel {
     pub email: String,
 }
 
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
 enum RiseStatus {
     None = 0,
     Pending = 1,
