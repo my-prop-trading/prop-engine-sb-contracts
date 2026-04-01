@@ -20,7 +20,7 @@ pub struct RiseStatusUpdatedEventSbModel {
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
-enum RiseStatus {
+pub enum RiseStatus {
     None = 0,
     Pending = 1,
     Ready = 2,
