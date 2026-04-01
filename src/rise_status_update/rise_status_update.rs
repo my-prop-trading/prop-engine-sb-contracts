@@ -11,9 +11,15 @@ pub struct RiseStatusUpdatedEventSbModel {
     #[prost(string, tag = "1")]
     pub rise_id: String,
 
-    #[prost(int32, tag = "2")]
+    #[prost(enumeration="RiseStatus", tag = "2")]
     pub status: i32,
 
     #[prost(string, tag = "3")]
     pub email: String,
+}
+
+enum RiseStatus {
+    None = 0,
+    Pending = 1,
+    Ready = 2,
 }
