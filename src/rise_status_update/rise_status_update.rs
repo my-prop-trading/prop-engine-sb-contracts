@@ -11,8 +11,8 @@ pub struct RiseStatusUpdatedEventSbModel {
     #[prost(string, tag = "1")]
     pub rise_id: String,
 
-    #[prost(string, tag = "2")]
-    pub status: int32,
+    #[prost(int32, tag = "2")]
+    pub status: i32,
 
     #[prost(string, tag = "3")]
     pub email: String,
