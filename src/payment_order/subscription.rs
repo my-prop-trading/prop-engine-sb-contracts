@@ -5,7 +5,7 @@ service_sdk::macros::use_my_sb_entity_protobuf_model!();
 pub struct PaymentOrderReceivedSbModel {
     #[prost(string, tag = "1")]
     pub subscription_id: String,
-    #[prost(enumeration = "PaymentOrderStatus", tag = "2")]
+    #[prost(enumeration = "SubscriptionEvent", tag = "2")]
     pub subscription_event: i32,
     #[prost(string, tag = "3")]
     pub buyer_email: String,
