@@ -15,6 +15,10 @@ pub struct PaymentSubscriptionWebhook {
     pub product_currency: String,
     #[prost(string, tag = "6")]
     pub product_code: String,
+    #[prost(int64, optional, tag = "7")]
+    pub started_at: Option<i64>,
+    #[prost(int64, optional, tag = "8")]
+    pub expires_at: Option<i64>,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
@@ -24,4 +28,5 @@ pub enum SubscriptionEvent {
     Suspend = 1,
     Disable = 2,
     Block = 3,
+    Create = 4,
 }
