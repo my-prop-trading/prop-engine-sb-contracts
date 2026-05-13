@@ -19,6 +19,8 @@ pub struct PaymentSubscriptionWebhook {
     pub started_at: Option<i64>,
     #[prost(int64, optional, tag = "8")]
     pub expires_at: Option<i64>,
+    #[prost(string, optional, tag = "9")]
+    pub buyer_id: Option<String>,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
