@@ -21,6 +21,10 @@ pub struct PaymentSubscriptionWebhook {
     pub expires_at: Option<i64>,
     #[prost(string, optional, tag = "9")]
     pub buyer_id: Option<String>,
+    // proto3 default = 0 = Unspecified — старые publisher'ы шлют 0, consumer трактует как Billerix
+    // (см. PaymentProvider::resolve_legacy).
+    #[prost(enumeration = "PaymentProvider", tag = "10")]
+    pub provider: i32,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
@@ -31,4 +35,23 @@ pub enum SubscriptionEvent {
     Disable = 2,
     Block = 3,
     Create = 4,
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum PaymentProvider {
+    Unspecified = 0,
+    Billerix = 1,
+    SolidGate = 2,
+}
+
+impl PaymentProvider {
+    /// Backward-compatible resolution: messages emitted before 0.9.10 had no `provider`
+    /// field, so they arrive with `Unspecified` and are treated as Billerix.
+    pub fn resolve_legacy(self) -> PaymentProvider {
+        match self {
+            PaymentProvider::Unspecified => PaymentProvider::Billerix,
+            other => other,
+        }
+    }
 }
