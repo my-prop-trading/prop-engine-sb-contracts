@@ -27,6 +27,12 @@ pub struct PaymentSubscriptionWebhook {
     // solidgate-webhook) обязаны проставлять конкретный provider явно.
     #[prost(enumeration = "PaymentProvider", tag = "10")]
     pub provider: i32,
+    /// Scheduled/effective cancellation timestamp (unix micros), when known. For a subscription
+    /// cancelled at the end of its billing period the status stays active (Create/Renew) while this
+    /// carries the future effective-cancel date so the UI can show "cancels on <date>". None when
+    /// not applicable.
+    #[prost(int64, optional, tag = "11")]
+    pub cancelled_at: Option<i64>,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
