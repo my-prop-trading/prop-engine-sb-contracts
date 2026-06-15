@@ -225,3 +225,9 @@ pub mod client_authenticated;
 #[cfg(feature = "rise-status-update")]
 pub mod rise_status_update;
 
+#[cfg(feature = "risk-assignment-changed")]
+mod risk_assignment_changed;
+
+#[cfg(feature = "risk-assignment-changed")]
+pub use risk_assignment_changed::*;
+
