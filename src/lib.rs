@@ -231,3 +231,9 @@ mod risk_assignment_changed;
 #[cfg(feature = "risk-assignment-changed")]
 pub use risk_assignment_changed::*;
 
+#[cfg(feature = "boldsign-document-completed")]
+mod boldsign_document_completed;
+
+#[cfg(feature = "boldsign-document-completed")]
+pub use boldsign_document_completed::*;
+
