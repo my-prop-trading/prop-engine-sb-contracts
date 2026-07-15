@@ -33,6 +33,11 @@ pub struct PaymentSubscriptionWebhook {
     /// not applicable.
     #[prost(int64, optional, tag = "11")]
     pub cancelled_at: Option<i64>,
+    /// Customer-facing payment method used for this subscription, as reported by the provider
+    /// (e.g. "card", "paypal"). Normalized to lowercase by the publisher. None when the provider
+    /// does not expose it (e.g. Billerix subscription webhooks carry no payment method).
+    #[prost(string, optional, tag = "12")]
+    pub payment_method: Option<String>,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
