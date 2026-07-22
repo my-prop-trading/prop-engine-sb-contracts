@@ -37,6 +37,12 @@ mod trading_scenario_update;
 #[cfg(feature = "trading-scenario-update")]
 pub use trading_scenario_update::*;
 
+#[cfg(feature = "account-review-ready")]
+mod account_review_ready;
+
+#[cfg(feature = "account-review-ready")]
+pub use account_review_ready::*;
+
 #[cfg(feature = "account-kyc-update")]
 mod account_kyc_update;
 
