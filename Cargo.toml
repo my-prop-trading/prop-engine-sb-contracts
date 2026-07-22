@@ -1,6 +1,6 @@
 [package]
 name = "prop-engine-sb-contracts"
-version = "0.9.15"
+version = "0.9.17"
 edition = "2021"
 
 [features]
@@ -16,6 +16,7 @@ all = [
     "trader-account-status-update",
     "account-balance-update",
     "trading-scenario-update",
+    "account-review-ready",
     "metatrader-scenario-update",
     "account-kyc-update",
     "sumsub-status-update",
@@ -60,6 +61,7 @@ trader-account-blocked = []
 trader-account-status-update = []
 account-balance-update = []
 trading-scenario-update = []
+account-review-ready = []
 metatrader-scenario-update = []
 account-kyc-update = []
 sumsub-status-update = []
