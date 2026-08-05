@@ -37,6 +37,13 @@ pub struct  TradingScenarioBodySbModel {
 
     #[prost(double, tag = "9")]
     pub max_profit_pct: f64,
+
+    // Realized (closed-balance) profit of the phase = balance − initial_balance
+    // (trading-control's TotalRealizedProfitFormula, already rounded). Added because
+    // current_profit (tag 5) is equity-based and includes open positions, so it can't
+    // be used where only closed/realized profit is meant.
+    #[prost(double, tag = "10")]
+    pub realized_profit: f64,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
