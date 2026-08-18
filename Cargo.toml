@@ -1,6 +1,6 @@
 [package]
 name = "prop-engine-sb-contracts"
-version = "0.9.19"
+version = "0.9.20"
 edition = "2021"
 
 [features]
@@ -14,6 +14,7 @@ all = [
     "trader-account-creation",
     "trader-account-blocked",
     "trader-account-status-update",
+    "trader-account-activation-paid",
     "account-balance-update",
     "trading-scenario-update",
     "account-review-ready",
@@ -59,6 +60,8 @@ payment-order = []
 trader-account-creation = []
 trader-account-blocked = []
 trader-account-status-update = []
+# Reuses the account enums of the status-update contract
+trader-account-activation-paid = ["trader-account-status-update"]
 account-balance-update = []
 trading-scenario-update = []
 account-review-ready = []

@@ -25,6 +25,12 @@ mod trader_account_status_update;
 #[cfg(feature = "trader-account-status-update")]
 pub use trader_account_status_update::*;
 
+#[cfg(feature = "trader-account-activation-paid")]
+mod trader_account_activation_paid;
+
+#[cfg(feature = "trader-account-activation-paid")]
+pub use trader_account_activation_paid::*;
+
 #[cfg(feature = "account-balance-update")]
 mod account_balance_update;
 
