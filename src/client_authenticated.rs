@@ -8,4 +8,9 @@ pub struct ClientAuthenticatedSbModel {
 
     #[prost(string, tag = "2")]
     pub client_id: String,
+
+    /// Client IP at authentication (from X-Forwarded-For). PROP25-2360: consumed by the contractor
+    /// auto-approve unique-IP check. Empty when the source could not resolve it.
+    #[prost(string, tag = "3")]
+    pub ip: String,
 }
