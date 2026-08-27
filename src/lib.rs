@@ -249,3 +249,9 @@ mod boldsign_document_completed;
 #[cfg(feature = "boldsign-document-completed")]
 pub use boldsign_document_completed::*;
 
+
+#[cfg(feature = "contract-data-incomplete")]
+mod contract_data_incomplete;
+
+#[cfg(feature = "contract-data-incomplete")]
+pub use contract_data_incomplete::*;
