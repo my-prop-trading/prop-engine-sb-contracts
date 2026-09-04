@@ -13,4 +13,11 @@ pub struct ClientAuthenticatedSbModel {
     /// auto-approve unique-IP check. Empty when the source could not resolve it.
     #[prost(string, tag = "3")]
     pub ip: String,
+
+    /// ISO-3166 alpha-2 country of the login IP, from the Cloudflare `CF-IPCountry` header
+    /// (PROP25-2360, Iana 2026-09-04): the unique-IP check now counts distinct countries, so a
+    /// client's dynamic same-country IPs no longer trip it. Empty when the header is absent or
+    /// Cloudflare could not resolve the country (`XX`/`T1` are normalised to empty upstream).
+    #[prost(string, tag = "4")]
+    pub country: String,
 }
