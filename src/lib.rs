@@ -49,6 +49,18 @@ mod account_review_ready;
 #[cfg(feature = "account-review-ready")]
 pub use account_review_ready::*;
 
+#[cfg(feature = "competition-enrolled")]
+mod competition_enrolled;
+
+#[cfg(feature = "competition-enrolled")]
+pub use competition_enrolled::*;
+
+#[cfg(feature = "competition-started")]
+mod competition_started;
+
+#[cfg(feature = "competition-started")]
+pub use competition_started::*;
+
 #[cfg(feature = "account-kyc-update")]
 mod account_kyc_update;
 
