@@ -246,6 +246,12 @@ pub mod trading_started;
 #[cfg(feature = "client-authenticated")]
 pub mod client_authenticated;
 
+#[cfg(feature = "client-registered")]
+mod client_registered;
+
+#[cfg(feature = "client-registered")]
+pub use client_registered::*;
+
 #[cfg(feature = "rise-status-update")]
 pub mod rise_status_update;
 

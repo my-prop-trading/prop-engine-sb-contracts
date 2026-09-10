@@ -1,6 +1,6 @@
 [package]
 name = "prop-engine-sb-contracts"
-version = "0.9.24"
+version = "0.9.25"
 edition = "2021"
 
 [features]
@@ -52,6 +52,7 @@ all = [
     "payment-session",
     "trading-started",
     "client-authenticated",
+    "client-registered",
     "rise-status-update",
     "risk-assignment-changed",
     "boldsign-document-completed",
@@ -106,6 +107,7 @@ rise-status-update = []
 risk-assignment-changed = []
 boldsign-document-completed = []
 contract-data-incomplete = []
+client-registered = []
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
