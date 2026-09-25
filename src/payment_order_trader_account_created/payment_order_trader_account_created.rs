@@ -34,4 +34,11 @@ pub struct PaymentOrderTraderAccountCreatedBodySbModel {
 
     #[prost(string, tag = "9")]
     pub trader_account_id: String,
+
+    /// PROP25-2491: true when this account belongs to a bulk order (quantity > 1). The email path
+    /// suppresses the per-account payment-received email for bulk accounts, because a single
+    /// order-level "Bulk Payment Received" email is sent from BulkOrderProvisioned instead. Additive:
+    /// defaults to false, so single-account orders are unchanged.
+    #[prost(bool, tag = "10")]
+    pub is_bulk: bool,
 }
