@@ -41,4 +41,10 @@ pub struct PaymentOrderTraderAccountCreatedBodySbModel {
     /// defaults to false, so single-account orders are unchanged.
     #[prost(bool, tag = "10")]
     pub is_bulk: bool,
+
+    /// PROP25-2491: the number of accounts in the order (1 for a normal single-account order). Lets
+    /// consumers such as admin-notifications show "N accounts" for a bulk order. Additive: defaults
+    /// to 0 for old publishers; consumers should treat 0 as 1.
+    #[prost(uint32, tag = "11")]
+    pub quantity: u32,
 }
