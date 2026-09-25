@@ -36,4 +36,8 @@ pub struct BulkOrderProvisionedBodySbModel {
     /// True when the order's package is Instant Funding, selecting the Instant Funding email variant.
     #[prost(bool, tag = "5")]
     pub is_instant_funding: bool,
+
+    /// The trading package title, for the email body (the package all accounts in the order share).
+    #[prost(string, tag = "6")]
+    pub trading_package_title: String,
 }
