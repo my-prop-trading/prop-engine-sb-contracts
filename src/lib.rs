@@ -61,6 +61,12 @@ mod competition_started;
 #[cfg(feature = "competition-started")]
 pub use competition_started::*;
 
+#[cfg(feature = "bulk-order-provisioned")]
+mod bulk_order_provisioned;
+
+#[cfg(feature = "bulk-order-provisioned")]
+pub use bulk_order_provisioned::*;
+
 #[cfg(feature = "account-kyc-update")]
 mod account_kyc_update;
 
