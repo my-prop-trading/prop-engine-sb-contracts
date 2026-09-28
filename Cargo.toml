@@ -53,6 +53,7 @@ all = [
     "payment-session",
     "trading-started",
     "client-authenticated",
+    "client-registered",
     "rise-status-update",
     "risk-assignment-changed",
     "boldsign-document-completed",
@@ -108,6 +109,7 @@ rise-status-update = []
 risk-assignment-changed = []
 boldsign-document-completed = []
 contract-data-incomplete = []
+client-registered = []
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
