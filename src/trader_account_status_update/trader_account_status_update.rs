@@ -45,6 +45,10 @@ pub struct TraderAccountStatusUpdateBodySbModel {
 
     #[prost(string, tag = "13")]
     pub order_id: String,
+
+    /// When the event happened, unix microseconds; 0 when the publisher did not set it.
+    #[prost(int64, tag = "14")]
+    pub event_time: i64,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

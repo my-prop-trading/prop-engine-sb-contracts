@@ -20,4 +20,8 @@ pub struct AccountReviewReadyBodySbModel {
 
     #[prost(string, tag = "3")]
     pub brand: String,
+
+    /// When the event happened, unix microseconds; 0 when the publisher did not set it.
+    #[prost(int64, tag = "4")]
+    pub event_time: i64,
 }
