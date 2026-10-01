@@ -1,6 +1,6 @@
 [package]
 name = "prop-engine-sb-contracts"
-version = "0.9.27"
+version = "0.9.28"
 edition = "2021"
 
 [features]
@@ -11,6 +11,7 @@ default = []
 all = [
     "account-registration",
     "payment-order",
+    "livechat-event",
     "trader-account-creation",
     "trader-account-blocked",
     "trader-account-status-update",
@@ -62,6 +63,7 @@ all = [
 
 account-registration = []
 payment-order = []
+livechat-event = []
 trader-account-creation = []
 trader-account-blocked = []
 trader-account-status-update = []

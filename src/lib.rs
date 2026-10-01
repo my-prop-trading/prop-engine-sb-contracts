@@ -13,6 +13,12 @@ mod payment_order;
 #[cfg(feature = "payment-order")]
 pub use payment_order::*;
 
+#[cfg(feature = "livechat-event")]
+mod livechat_event;
+
+#[cfg(feature = "livechat-event")]
+pub use livechat_event::*;
+
 #[cfg(feature = "trader-account-creation")]
 mod trader_account_creation;
 
