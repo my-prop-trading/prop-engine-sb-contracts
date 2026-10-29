@@ -49,6 +49,12 @@ pub struct TraderAccountStatusUpdateBodySbModel {
     /// When the event happened, unix microseconds; 0 when the publisher did not set it.
     #[prost(int64, tag = "14")]
     pub event_time: i64,
+
+    /// PROP25-2751: a TrialPass account closed as passed (status Disabled). Carried here because the
+    /// event is published before the account row is saved, so a lookup may still read the old row.
+    /// False everywhere else, including every other path that disables an account.
+    #[prost(bool, tag = "15")]
+    pub trial_passed: bool,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
