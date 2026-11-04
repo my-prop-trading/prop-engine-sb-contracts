@@ -195,6 +195,12 @@ mod news_violations_restrictions;
 #[cfg(feature = "news-violations-restrictions")]
 pub use news_violations_restrictions::*;
 
+#[cfg(feature = "news-trade-adjustment")]
+mod news_trade_adjustment;
+
+#[cfg(feature = "news-trade-adjustment")]
+pub use news_trade_adjustment::*;
+
 #[cfg(feature = "manual-trader-account-creation")]
 pub mod manual_trader_account_creation;
 
