@@ -1,6 +1,6 @@
 [package]
 name = "prop-engine-sb-contracts"
-version = "0.9.29"
+version = "0.9.30"
 edition = "2021"
 
 [features]
@@ -41,6 +41,7 @@ all = [
     "account-email-changed",
     "woocommerce-external-order-update",
     "news-violations-restrictions",
+    "news-trade-adjustment",
     "manual-trader-account-creation",
     "acqufy-order-click",
     "acqufy-client-click",
@@ -94,6 +95,7 @@ account-password-changed = []
 account-email-changed = []
 woocommerce-external-order-update = []
 news-violations-restrictions = []
+news-trade-adjustment = []
 manual-trader-account-creation = []
 acqufy-order-click = []
 acqufy-client-click = []
