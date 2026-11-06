@@ -55,6 +55,12 @@ pub struct PayoutStatusUpdateBodySbModel {
     /// When the event happened, unix microseconds; 0 when the publisher did not set it.
     #[prost(int64, tag = "15")]
     pub event_time: i64,
+
+    /// The payout this row belongs to. One payout is stored as several rows (e.g. RevenueShare
+    /// and Withdrawal) sharing it, and a status change is published per row. Empty when the
+    /// publisher did not set it.
+    #[prost(string, tag = "16")]
+    pub aggregated_id: String,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

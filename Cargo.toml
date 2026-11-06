@@ -1,6 +1,6 @@
 [package]
 name = "prop-engine-sb-contracts"
-version = "0.9.30"
+version = "0.9.31"
 edition = "2021"
 
 [features]
@@ -21,6 +21,8 @@ all = [
     "account-review-ready",
     "competition-enrolled",
     "competition-started",
+    "competition-account-activated",
+    "competition-disqualified",
     "bulk-order-provisioned",
     "metatrader-scenario-update",
     "account-kyc-update",
@@ -75,6 +77,9 @@ trading-scenario-update = []
 account-review-ready = []
 competition-enrolled = []
 competition-started = []
+competition-account-activated = []
+# Reuses TradingScenarioFailReason of the trading scenario contract
+competition-disqualified = ["trading-scenario-update"]
 bulk-order-provisioned = []
 metatrader-scenario-update = []
 account-kyc-update = []
