@@ -67,6 +67,18 @@ mod competition_started;
 #[cfg(feature = "competition-started")]
 pub use competition_started::*;
 
+#[cfg(feature = "competition-account-activated")]
+mod competition_account_activated;
+
+#[cfg(feature = "competition-account-activated")]
+pub use competition_account_activated::*;
+
+#[cfg(feature = "competition-disqualified")]
+mod competition_disqualified;
+
+#[cfg(feature = "competition-disqualified")]
+pub use competition_disqualified::*;
+
 #[cfg(feature = "bulk-order-provisioned")]
 mod bulk_order_provisioned;
 
