@@ -303,3 +303,9 @@ mod contract_data_incomplete;
 
 #[cfg(feature = "contract-data-incomplete")]
 pub use contract_data_incomplete::*;
+
+#[cfg(feature = "trading-platform-login")]
+mod trading_platform_login;
+
+#[cfg(feature = "trading-platform-login")]
+pub use trading_platform_login::*;
