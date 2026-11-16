@@ -309,3 +309,9 @@ mod trading_platform_login;
 
 #[cfg(feature = "trading-platform-login")]
 pub use trading_platform_login::*;
+
+#[cfg(feature = "client-realtime-event")]
+mod client_realtime_event;
+
+#[cfg(feature = "client-realtime-event")]
+pub use client_realtime_event::*;
