@@ -8,3 +8,5 @@ pub use payment_order_received::*;
 pub mod external_payment_received;
 
 pub mod subscription;
+
+pub mod provider_order;
