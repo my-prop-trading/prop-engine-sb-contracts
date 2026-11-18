@@ -52,4 +52,10 @@ pub struct PaymentOrderTraderAccountCreatedBodySbModel {
     /// Empty from old publishers.
     #[prost(string, tag = "12")]
     pub trading_package_title: String,
+
+    /// PROP25-2873: how the order was paid or granted ("Fair Shot", "Free Reward", "Manual",
+    /// "Competition", "Free Trial", a payment provider...). The bell tells a Progress Pass grant from
+    /// the other free orders by it. Empty from old publishers.
+    #[prost(string, tag = "13")]
+    pub payment_method_title: String,
 }
