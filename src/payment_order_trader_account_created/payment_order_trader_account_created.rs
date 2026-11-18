@@ -47,4 +47,9 @@ pub struct PaymentOrderTraderAccountCreatedBodySbModel {
     /// to 0 for old publishers; consumers should treat 0 as 1.
     #[prost(uint32, tag = "11")]
     pub quantity: u32,
+
+    /// PROP25-2868: the trading package title of the order, for the bell "Payment received" text.
+    /// Empty from old publishers.
+    #[prost(string, tag = "12")]
+    pub trading_package_title: String,
 }

@@ -30,7 +30,24 @@ pub struct PaymentOrderBodySbModel {
     pub order_status: i32,
 
     #[prost(int32, tag = "8")]
-    pub decline_reason_type: i32
+    pub decline_reason_type: i32,
+
+    /// PROP25-2868: the raw decline reason from the payment provider. `decline_reason_type` is the
+    /// group of the decline emails; the bell also needs the raw text to skip payments the trader
+    /// cancelled or abandoned ("Cardholder selected 'Cancel'", "Transaction expired"), which the
+    /// groups do not tell apart. None when the order has no decline reason.
+    #[prost(string, optional, tag = "9")]
+    pub decline_reason: Option<String>,
+
+    /// PROP25-2868: the trading package title of the order, for the bell texts.
+    #[prost(string, tag = "10")]
+    pub trading_package_title: String,
+
+    /// PROP25-2868: when the order got this status, unix microseconds. A repeated provider
+    /// callback with the same result is not published again, so a newer time means a new payment
+    /// attempt. 0 from old publishers.
+    #[prost(int64, tag = "11")]
+    pub event_time: i64,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

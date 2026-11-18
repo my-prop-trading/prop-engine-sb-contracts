@@ -40,4 +40,9 @@ pub struct BulkOrderProvisionedBodySbModel {
     /// The trading package title, for the email body (the package all accounts in the order share).
     #[prost(string, tag = "6")]
     pub trading_package_title: String,
+
+    /// PROP25-2868: the money paid for the whole order. 0 for a free order (gift), which gets no
+    /// "Payment received" bell notification.
+    #[prost(double, tag = "7")]
+    pub total_paid: f64,
 }
