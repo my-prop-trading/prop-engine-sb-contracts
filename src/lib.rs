@@ -321,3 +321,9 @@ mod certificate_created;
 
 #[cfg(feature = "certificate-created")]
 pub use certificate_created::*;
+
+#[cfg(feature = "trading-account-rule-event")]
+mod trading_account_rule_event;
+
+#[cfg(feature = "trading-account-rule-event")]
+pub use trading_account_rule_event::*;
