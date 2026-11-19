@@ -17,6 +17,9 @@ pub struct ContractCreatedSbModel {
     pub sign_status: i32, 
     #[prost(enumeration="ContractLiveAccountStatusDto", tag = "7")]
     pub live_account_status: i32,
+    /// When the contract was created, unix microseconds. 0 from old publishers.
+    #[prost(int64, tag = "8")]
+    pub event_time: i64,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

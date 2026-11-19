@@ -20,6 +20,9 @@ pub struct ClientLiveAccountContractUpdateBodySbModel{
     pub brand: String,
     #[prost(string, tag = "6")]
     pub contract_id: String,
+    /// When the contract changed, unix microseconds. 0 from old publishers.
+    #[prost(int64, tag = "7")]
+    pub event_time: i64,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
