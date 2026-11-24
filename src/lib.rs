@@ -327,3 +327,9 @@ mod trading_account_rule_event;
 
 #[cfg(feature = "trading-account-rule-event")]
 pub use trading_account_rule_event::*;
+
+#[cfg(feature = "rpt-violation")]
+mod rpt_violation;
+
+#[cfg(feature = "rpt-violation")]
+pub use rpt_violation::*;
