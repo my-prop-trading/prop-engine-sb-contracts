@@ -310,6 +310,12 @@ mod trading_platform_login;
 #[cfg(feature = "trading-platform-login")]
 pub use trading_platform_login::*;
 
+#[cfg(feature = "trading-platform-order")]
+mod trading_platform_order;
+
+#[cfg(feature = "trading-platform-order")]
+pub use trading_platform_order::*;
+
 #[cfg(feature = "client-realtime-event")]
 mod client_realtime_event;
 
