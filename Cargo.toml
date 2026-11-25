@@ -1,6 +1,6 @@
 [package]
 name = "prop-engine-sb-contracts"
-version = "0.9.40"
+version = "0.9.41"
 edition = "2021"
 
 [features]
@@ -63,6 +63,7 @@ all = [
     "boldsign-document-completed",
     "contract-data-incomplete",
     "trading-platform-login",
+    "trading-platform-order",
     "client-realtime-event",
     "certificate-created",
     "trading-account-rule-event",
@@ -125,6 +126,7 @@ boldsign-document-completed = []
 contract-data-incomplete = []
 client-registered = []
 trading-platform-login = []
+trading-platform-order = []
 client-realtime-event = []
 certificate-created = []
 trading-account-rule-event = []
