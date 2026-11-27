@@ -1355,7 +1355,7 @@ dependencies = [
 
 [[package]]
 name = "prop-engine-sb-contracts"
-version = "0.9.41"
+version = "0.9.42"
 dependencies = [
  "prost",
  "service-sdk",

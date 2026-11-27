@@ -48,6 +48,10 @@ pub enum SubscriptionEvent {
     Disable = 2,
     Block = 3,
     Create = 4,
+    /// First charge not confirmed yet.
+    Pending = 5,
+    /// First charge never succeeded; the subscription never became active.
+    Expire = 6,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
