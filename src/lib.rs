@@ -339,3 +339,9 @@ mod rpt_violation;
 
 #[cfg(feature = "rpt-violation")]
 pub use rpt_violation::*;
+
+#[cfg(feature = "client-access-event")]
+mod client_access_event;
+
+#[cfg(feature = "client-access-event")]
+pub use client_access_event::*;
